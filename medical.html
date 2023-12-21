@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Medical Lab Website</title>
+	<link rel="stylesheet" type="text/css" href="medical.css">
+	<script src="https://kit.fontawesome.com/8f5456b38b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div id="header">
+		<div class="container">
+			<nav id="navbar">
+				<a href="index.html"><img src="images/logo1.png" class="logo"></a>
+				<ul id="sidemenu">
+					<li><a href="index.html#header">Home</a></li>
+					<li><a href="index.html#about">About</a></li>
+					<li><a href="index.html#services">Services</a></li>
+					<li><a href="index.html#portfolio">Portfolio</a></li>
+					<li><a href="index.html#contact">Contact</a></li>
+					<i class="fas fa-times" onclick="closemenu()"></i>
+				</ul>
+				<i class="fas fa-bars" onclick="openmenu()"></i>
+			</nav>
+		</div>
+	</div><br>
+	<br>
+	<div class="mowo">
+		<a href="more.html">My Work</a><br>
+		<br>
+	</div>
+	<div class="arrow-icon">
+		<div class="arrow-left">
+			<a href="chat.html"><i class="fa-solid fa-arrow-left"></i></a><p>Previous Project</p>
+		</div>
+		<div class="arrow-right">
+			<a href="ecom.html"><i class="fa-solid fa-arrow-right"></i></a>
+			<p>Next project</p>
+		</div>
+	</div><br>
+	<div class="syn">
+	<h3>Synopsis:</h3><br>
+	<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The project entitled “MEDICAL LAB SYSTEM” is developed using HTML,CSS,Javascript as front end,Django framework and SQLite as backend tool during MCA 2nd Year.The main objective of this project is to provide a website,where the patients can book lab according to their convenience timing displayed.In current availability of applications,the patient will not have access to book or view the reports.In available applications only lab incharge and doctors only will be able to access.There would be specific application or software only for the reach of the doctors lab technician.The application overcomes the problem where the patient can have the access to the system.</p>
+	</div>
+	<div class="ima">
+		<img src="images/MedicalLab/Login.png">
+		<h2>Lab:</h2>
+		<img src="images/MedicalLab/Labs.png">
+		<img src="images/MedicalLab/Labdoc.png">
+		<h2>Patient:</h2>
+		<img src="images/MedicalLab/Patient.png">
+		<img src="images/MedicalLab/TimeSlot.png">
+		<h2>Doctor:</h2>
+		<img src="images/MedicalLab/Doctor.png">
+		<img src="images/MedicalLab/Report.png">
+	</div>
+	<div class="des">
+		<h3>Project Desciption:</h3><br>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The “MEDICAL LAB SYSTEM” deals with the booking for a test and obtaining reports online. The  patient who is using our system for the first time can register with the details  like user id, user name, password, address, mobile number and email address. Once registered they can login with their login credentials sent through email for future use. After login the patient is able to book appointments i.e., selecting the lab suggested by doctor procedure for taking the test and the patient can add a test by selecting the  particular date and time. The doctor can also register with the details like user id, user name,  password, address, mobile number and email address. Once registered they can  login with their login credentials provided through their mail. The doctor is able to view the patient's and send reports via their login.</p>
+	</div>
+	<br>
+	<div class="copyright">
+			<p>Copyright © Dharun. Made with <i class="fas fa-heart"></i></p>
+	</div>
+<script>
+	var sidemeu=document.getElementById("sidemenu");
+	function openmenu(){
+		sidemeu.style.right="0";
+	}
+
+	function closemenu(){
+		sidemeu.style.right="-200px";
+	}
+</script>
+<script>
+		document.addEventListener(“touchstart”, handler)
+</script>
+</body>
+</html>

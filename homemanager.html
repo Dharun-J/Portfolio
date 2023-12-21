@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Home Manager Mobile Application</title>
+	<link rel="stylesheet" type="text/css" href="homemanager.css">
+	<script src="https://kit.fontawesome.com/8f5456b38b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div id="header">
+		<div class="container">
+			<nav id="navbar">
+				<a href="index.html"><img src="images/logo1.png" class="logo"></a>
+				<ul id="sidemenu">
+					<li><a href="index.html#header">Home</a></li>
+					<li><a href="index.html#about">About</a></li>
+					<li><a href="index.html#services">Services</a></li>
+					<li><a href="index.html#portfolio">Portfolio</a></li>
+					<li><a href="index.html#contact">Contact</a></li>
+					<i class="fas fa-times" onclick="closemenu()"></i>
+				</ul>
+				<i class="fas fa-bars" onclick="openmenu()"></i>
+			</nav>
+		</div>
+	</div><br>
+	<br>
+	<div class="mowo">
+		<a href="more.html">My Work</a><br>
+		<br>
+	</div>
+	<div class="arrow-icon">
+		<div class="arrow-left">
+			<a href="landing.html"><i class="fa-solid fa-arrow-left"></i></a><p>Previous Project</p>
+		</div>
+		<div class="arrow-right">
+			<a href="chat.html"><i class="fa-solid fa-arrow-right"></i></a>
+			<p>Next project</p>
+		</div>
+	</div><br>
+	<div class="syn">
+		<h3>Synopsis:</h3><br>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The application entitled "HOME MANAGER APP" developed using Java,XML,Firebase stores the user provided information done in B.Sc CSD 3rd Year.The modules present are Reminder,Digital Locker and News. The first module contains the details that are to be submitted by the user to remind the user about the task. There are some important images or documents that are better to be stored in a soft copy manner. The second module helps the user to store the images or documents safely. Some users may don’t have time or an idea to read daily newspapers and articles.The third module helps the user to read current news and search for news according to their wish.The user does not need to search for any newspapers or carry it.They can use this module to get knowledge about the day to day life.</p>
+	</div><br>
+	<div class="ima">
+		<h2>Register & Main Page</h2>
+		<img src="images/HomeManager/Register.jpg">
+		<img src="images/HomeManager/Login.jpg">
+		<img src="images/HomeManager/Main.jpg">
+		<h2>Reminder Page</h2>
+		<img src="images/HomeManager/Reminder_Page.jpg">
+		<img src="images/HomeManager/Vehicle.jpg">
+		<img src="images/HomeManager/Appliance.jpg">
+		<img src="images/HomeManager/ST.jpg">
+		<h2>Digital Locker Page</h2>
+		<img src="images/HomeManager/Digi_lock.jpg">
+		<img src="images/HomeManager/Img.jpg">
+		<h2>News Page</h2>
+		<img src="images/HomeManager/news.png">
+	</div>
+	<div class="des">
+		<h3>Project Desciption:</h3><br>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Home manager mobile application is implemented in Java programming language.The application stores information about reminding tasks,images and
+		documents.The user has to create an account in this application. Once after registering,the user should be able to login using email and password provided.After login, the user could be able to use the features present in the application.The features are reminder,digital lock,news.Admin is able to view the customer details who all have registered and also view submitted details for the features.The user can give details to the reminder task, it is stored and the task to be done is reminded.The user can save important images and documents.They can also see daily news.The Api is called and the data is updated day to day accordingly.NewsApi is an Api that is used for obtaining news.</p>
+	</div>
+	<br>
+	<div class="copyright">
+			<p>Copyright © Dharun. Made with <i class="fas fa-heart"></i></p>
+	</div>
+<script>
+	var sidemeu=document.getElementById("sidemenu");
+	function openmenu(){
+		sidemeu.style.right="0";
+	}
+
+	function closemenu(){
+		sidemeu.style.right="-200px";
+	}
+</script>
+<script>
+		document.addEventListener(“touchstart”, handler)
+</script>
+</body>
+</html>

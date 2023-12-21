@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Chat Website</title>
+	<link rel="stylesheet" type="text/css" href="chat.css">
+	<script src="https://kit.fontawesome.com/8f5456b38b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div id="header">
+		<div class="container">
+			<nav id="navbar">
+				<a href="index.html"><img src="images/logo1.png" class="logo"></a>
+				<ul id="sidemenu">
+					<li><a href="index.html#header">Home</a></li>
+					<li><a href="index.html#about">About</a></li>
+					<li><a href="index.html#services">Services</a></li>
+					<li><a href="index.html#portfolio">Portfolio</a></li>
+					<li><a href="index.html#contact">Contact</a></li>
+					<i class="fas fa-times" onclick="closemenu()"></i>
+				</ul>
+				<i class="fas fa-bars" onclick="openmenu()"></i>
+			</nav>
+		</div>
+	</div><br>
+	<br>
+	<div class="mowo">
+		<a href="more.html">My Work</a><br>
+		<br>
+	</div>
+	<div class="arrow-icon">
+		<div class="arrow-left">
+			<a href="homemanager.html"><i class="fa-solid fa-arrow-left"></i></a><p>Previous Project</p>
+		</div>
+		<div class="arrow-right">
+			<a href="medical.html"><i class="fa-solid fa-arrow-right"></i></a>
+			<p>Next project</p>
+		</div>
+	</div><br>
+	<div class="syn">
+		<h3>Synopsis:</h3><br>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The project entitled as “CHAT WEB APPLICATION” has been developed as a part of a chat website using HTML,CSS,Javascript as front end,Django framework and SQLite as backend tool during MCA 1st Year.The main objective of this project is to provide a chat application using website,where the users can chat with each other.In current availability of chat applications,the user should have the app installed in the device to access and use the application to chat.But this application overcome installation procedure.</p>
+	</div>
+	<div class="ima">
+		<img src="images/ChatApp/Register.png">
+		<img src="images/ChatApp/Login.png">
+		<img src="images/ChatApp/Start.png">
+		<img src="images/ChatApp/Chat.png">
+		<img src="images/ChatApp/Logout.png">
+	</div>
+	<div class="des">
+		<h3>Project Description:</h3><br>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Main aim of the project is to provide an online chat web platform to the users and increase the scope of chat application.This chat application is developed using Django.The chat application is person-to-person message application, which uses WebSockets for notifications.The web application can display messages which the user switches between the chats.First the user need to create an account, and other user should also have account.Then the first user could be able to search the other user.By sending request to other user,the first user would be able to chat. This web application contains text, voice messages and sending images or video.This web application is developed in Django Framework,HTML, CSS, JavaScript.Chat Application contains all the features of any chat app such as login, register and allows users to chat with anyone registered to the system.</p>
+	</div>
+	<br>
+	<div class="copyright">
+			<p>Copyright © Dharun. Made with <i class="fas fa-heart"></i></p>
+	</div>
+<script>
+	var sidemeu=document.getElementById("sidemenu");
+	function openmenu(){
+		sidemeu.style.right="0";
+	}
+
+	function closemenu(){
+		sidemeu.style.right="-200px";
+	}
+</script>
+<script>
+		document.addEventListener(“touchstart”, handler)
+</script>
+</body>
+</html>
