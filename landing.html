@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Webpage</title>
+	<link rel="stylesheet" type="text/css" href="landing.css">
+	<script src="https://kit.fontawesome.com/8f5456b38b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div id="header">
+		<div class="container">
+			<nav id="navbar">
+				<a href="index.html"><img src="images/logo1.png" class="logo"></a>
+				<ul id="sidemenu">
+					<li><a href="index.html#header">Home</a></li>
+					<li><a href="index.html#about">About</a></li>
+					<li><a href="index.html#services">Services</a></li>
+					<li><a href="index.html#portfolio">Portfolio</a></li>
+					<li><a href="index.html#contact">Contact</a></li>
+					<i class="fas fa-times" onclick="closemenu()"></i>
+				</ul>
+				<i class="fas fa-bars" onclick="openmenu()"></i>
+			</nav>
+		</div>
+	</div><br>
+	<br>
+	<div class="mowo">
+		<a href="more.html">My Work</a><br>
+		<br>
+	</div>
+	<div class="arrow-icon">
+		<div class="arrow-left">
+			<a href="furni.html"><i class="fa-solid fa-arrow-left"></i></a><p>Previous Project</p>
+		</div>
+		<div class="arrow-right">
+			<a href="homemanager.html"><i class="fa-solid fa-arrow-right"></i></a>
+			<p>Next project</p>
+		</div>
+	</div><br>
+	<div class="syn">
+		<h3>Synopsis:</h3><br>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The UI/UX for landing page is designed using Figma tool.This page is designed in a way that it is user friendly.This is a landing page for most of the websites.</p>
+	</div><br>
+	<div class="image">
+		<img src="images/lp.png">
+	</div>
+	<div class="copyright">
+			<p>Copyright © Dharun. Made with <i class="fas fa-heart"></i></p>
+	</div>
+<script>
+	var sidemeu=document.getElementById("sidemenu");
+	function openmenu(){
+		sidemeu.style.right="0";
+	}
+
+	function closemenu(){
+		sidemeu.style.right="-200px";
+	}
+</script>
+<script>
+		document.addEventListener(“touchstart”, handler)
+</script>	
+</body>
+</html>

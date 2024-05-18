@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>See More</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://kit.fontawesome.com/8f5456b38b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div id="more header">
+		<div class="container">
+			<nav id="navbar">
+				<a href="index.html"><img src="images/logo1.png" class="logo"></a>
+				<ul id="sidemenu">
+					<li><a href="index.html#header">Home</a></li>
+					<li><a href="index.html#about">About</a></li>
+					<li><a href="index.html#services">Services</a></li>
+					<li><a href="index.html#portfolio">Portfolio</a></li>
+					<li><a href="index.html#contact">Contact</a></li>
+					<i class="fas fa-times" onclick="closemenu()"></i>
+				</ul>
+				<i class="fas fa-bars" onclick="openmenu()"></i>
+			</nav>
+		</div>
+	</div>
+	<div id="portfolio">
+		<div class="container">
+			<h1 class="subtitle">My Work</h1>
+			<div class="work-list">
+				<div class="work">
+					<img src="images/int_tile.png">
+					<div class="layer">
+						<h3>Online Shopping App</h3>
+						<p>Designing UI/UX for E-commerce app using Figma.</p>
+						<a href="ecom.html"><i class="fas fa-external-link-alt"></i></a>
+					</div>
+				</div>
+				<div class="work">
+					<img src="images/HDp_tile.png">
+					<div class="layer">
+						<h3>Furniture Dashboard Website</h3>
+						<p>Designing UI/UX for Furniture dashboard using Figma.</p>
+						<a href="furni.html"><i class="fas fa-external-link-alt"></i></a>
+					</div>
+				</div>		
+				<div class="work">
+					<img src="images/lp_tile.png">
+					<div class="layer">
+						<h3>Landing Page</h3>
+						<p>Landing Page UI for a website designed using Figma.</p>
+						<a href="landing.html"><i class="fas fa-external-link-alt"></i></a>
+					</div>
+				</div>
+				<div class="work">
+					<img src="images/hm_tile.jpg">
+					<div class="layer">
+						<h3>Home Manager App</h3>
+						<p>Mobile application developed using Android Studio.</p>
+						<a href="homemanager.html"><i class="fas fa-external-link-alt"></i></a>
+					</div>
+				</div>
+				<div class="work">
+					<img src="images/Chat_tile.png">
+					<div class="layer">
+						<h3>Chat web application</h3>
+						<p>Chat web application using Django framework.</p>
+						<a href="chat.html"><i class="fas fa-external-link-alt"></i></a>
+					</div>
+				</div>
+				<div class="work">
+					<img src="images/Labs_tile.png">
+					<div class="layer">
+						<h3>Medical lab website</h3>
+						<p>Medical Lab website using Django framework.</p>
+						<a href="medical.html"><i class="fas fa-external-link-alt"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="copyright">
+			<p>Copyright © Dharun. Made with <i class="fas fa-heart"></i></p>
+	</div>
+<script>
+	var sidemeu=document.getElementById("sidemenu");
+	function openmenu(){
+		sidemeu.style.right="0";
+	}
+
+	function closemenu(){
+		sidemeu.style.right="-200px";
+	}
+</script>
+<script>
+		document.addEventListener(“touchstart”, handler)
+</script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Online Shopping App</title>
+	<link rel="stylesheet" type="text/css" href="ecom.css">
+	<script src="https://kit.fontawesome.com/8f5456b38b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div id="header">
+		<div class="container">
+			<nav id="navbar">
+				<a href="index.html"><img src="images/logo1.png" class="logo"></a>
+				<ul id="sidemenu">
+					<li><a href="index.html#header">Home</a></li>
+					<li><a href="index.html#about">About</a></li>
+					<li><a href="index.html#services">Services</a></li>
+					<li><a href="index.html#portfolio">Portfolio</a></li>
+					<li><a href="index.html#contact">Contact</a></li>
+					<i class="fas fa-times" onclick="closemenu()"></i>
+				</ul>
+				<i class="fas fa-bars" onclick="openmenu()"></i>
+			</nav>
+		</div>
+	</div><br>
+	<br>
+	<div class="mowo">
+		<a href="more.html">My Work</a><br>
+		<br>
+	</div>
+	<div class="arrow-icon">
+		<div class="arrow-left">
+			<a href="medical.html"><i class="fa-solid fa-arrow-left"></i></a><p>Previous Project</p>
+		</div>
+		<div class="arrow-right">
+			<a href="furni.html"><i class="fa-solid fa-arrow-right"></i></a>
+			<p>Next project</p>
+		</div>
+	</div><br>
+	<div class="syn">
+		<h3>Synopsis:</h3><br>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The UI/UX for E Commerce app is designed using Figma tool.This app is designed in a way that it is user friendly and convenient to every end users.This is a normal daily purpose E commerce app which was designed during the learning of course from Udemy.</p>
+	</div><br>
+	<h2>Project Duration:October 2023-November 2023</h2>
+	<div class="low">
+		<img src="images/UI/low.png">
+	</div>
+	<div class="hig">
+		<img src="images/UI/high.png">
+	</div>
+	<div class="image1">
+		<img src="images/UI/Onboard.png">
+	</div>
+	<div class="image2">
+		<img src="images/UI/Registration.png">
+	</div>
+	<div class="mem">
+		<h2>Members Screen:</h2>
+		<img src="images/UI/Members.png">
+		<video width="1200" height="700" controls>
+			<source src="images/video/Member.mp4" type="video/mp4">
+		</video>
+	</div>
+	<div class="non">
+		<h2>Non Members Screen:</h2>
+		<img src="images/UI/Non-Members.png">
+		<video width="1200" height="700" controls>
+			<source src="images/video/NonMember.mp4" type="video/mp4">
+		</video>
+	</div>
+	<div class="image5">
+		<img src="images/UI/Product-Checkout.png">
+	</div>
+	<div class="copyright">
+			<p>Copyright © Dharun. Made with <i class="fas fa-heart"></i></p>
+	</div>
+<script>
+	var sidemeu=document.getElementById("sidemenu");
+	function openmenu(){
+		sidemeu.style.right="0";
+	}
+
+	function closemenu(){
+		sidemeu.style.right="-200px";
+	}
+</script>
+<script>
+		document.addEventListener(“touchstart”, handler)
+</script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Chat Website</title>
+	<link rel="stylesheet" type="text/css" href="furni.css">
+	<script src="https://kit.fontawesome.com/8f5456b38b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div id="header">
+		<div class="container">
+			<nav id="navbar">
+				<a href="index.html"><img src="images/logo1.png" class="logo"></a>
+				<ul id="sidemenu">
+					<li><a href="index.html#header">Home</a></li>
+					<li><a href="index.html#about">About</a></li>
+					<li><a href="index.html#services">Services</a></li>
+					<li><a href="index.html#portfolio">Portfolio</a></li>
+					<li><a href="index.html#contact">Contact</a></li>
+					<i class="fas fa-times" onclick="closemenu()"></i>
+				</ul>
+				<i class="fas fa-bars" onclick="openmenu()"></i>
+			</nav>
+		</div>
+	</div><br>
+	<br>
+	<div class="mowo">
+		<a href="more.html">My Work</a><br>
+		<br>
+	</div>
+	<div class="arrow-icon">
+		<div class="arrow-left">
+			<a href="ecom.html"><i class="fa-solid fa-arrow-left"></i></a><p>Previous Project</p>
+		</div>
+		<div class="arrow-right">
+			<a href="landing.html"><i class="fa-solid fa-arrow-right"></i></a>
+			<p>Next project</p>
+		</div>
+	</div>
+	<br>
+	<div class="syn">
+		<h3>Synopsis:</h3><br>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The UI/UX for Furniture Dashboard website is designed using Figma tool.This website is is user friendly and convenient to every Admin and staff users.</p>
+	</div>
+	<br>
+	<div class="ima">
+		<h3>Low Fidelity WireFrame:</h3>
+		<img src="images/Furniture/Low/Dp.jpg">
+		<img src="images/Furniture/Low/Pp.jpg">
+		<img src="images/Furniture/Low/Op.jpg">
+		<img src="images/Furniture/Low/Ap.jpg">
+		<img src="images/Furniture/Low/Sp.jpg">
+		<h3>Mid Fidelity WireFrame:</h3>
+		<img src="images/Furniture/Middle/MDp.jpg">
+		<img src="images/Furniture/Middle/MPp.jpg">
+		<img src="images/Furniture/Middle/MOp.jpg">
+		<img src="images/Furniture/Middle/MAp.jpg">
+		<img src="images/Furniture/Middle/MSp.jpg">
+		<h3>High Fidelity WireFrame:</h3>
+		<img src="images/Furniture/High/HDp.jpg">
+		<img src="images/Furniture/High/HPp.jpg">
+		<img src="images/Furniture/High/HPap.jpg">
+		<img src="images/Furniture/High/HPup.jpg">
+		<img src="images/Furniture/High/HOp.jpg">
+		<img src="images/Furniture/High/HAp.jpg">
+		<img src="images/Furniture/High/HSp.jpg">
+		<img src="images/Furniture/High/HSap.jpg">
+	</div>
+	<br>
+	<div class="copyright">
+			<p>Copyright © Dharun. Made with <i class="fas fa-heart"></i></p>
+	</div>
+<script>
+	var sidemeu=document.getElementById("sidemenu");
+	function openmenu(){
+		sidemeu.style.right="0";
+	}
+
+	function closemenu(){
+		sidemeu.style.right="-200px";
+	}
+</script>
+<script>
+		document.addEventListener(“touchstart”, handler)
+</script>
+</body>
+</html>
