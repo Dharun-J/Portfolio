@@ -16,7 +16,6 @@ html{
 body{
 	background: #080808;
 	color: #fff;
-	overflow-x: hidden;
 }
 
 .container{
@@ -103,7 +102,6 @@ nav.sticky ul{
 .mowo a:hover::after{
 	width: 100%;
 }
-
 .arrow-icon{
 	margin-top: 15px;
 	margin: 5px;
@@ -150,6 +148,18 @@ nav.sticky ul{
 	transform: translateX(-5px);
 }
 
+.syn p{
+	word-spacing: 3px;
+	font-size: 20px;
+	line-height: 28px;
+}
+
+.des p{
+	word-spacing: 5px;
+	font-size: 20px;
+	line-height: 28px;
+}
+
 .copyright{
 	width: 100%;
 	text-align: center;
@@ -163,55 +173,12 @@ nav.sticky ul{
 	color: #0047AB;
 }
 
-/*image*/
-.image1 img{
+/*img*/
+.ima img{
 	padding: 1rem;
 	max-width: 100%;
 	height: auto;
 }
-
-.image2 img{
-	padding: 2rem;
-	max-width: 100%;
-	height: auto;
-}
-
-.mem img{
-	padding: 1rem;
-	max-width: 100%;
-	height: auto;
-}
-
-.non img{
-	padding: 1rem;
-	max-width: 100%;
-	height: auto;
-}
-
-.image5 img{
-	padding: 2rem;
-	max-width: 100%;
-	height: auto;
-}
-
-.syn p{
-	word-spacing: 3px;
-	font-size: 20px;
-	line-height: 28px;
-}
-
-.low img{
-	padding: 1rem;
-	max-width: 100%;
-	height: auto;
-}
-
-.hig img{
-	padding: 1rem;
-	max-width: 100%;
-	height: auto;
-}
-
 /*small screen*/
 nav .fas{
 	display: none;
@@ -223,20 +190,14 @@ nav .fas{
     	-webkit-tap-highlight-color: transparent;
     	-webkit-overflow-scrolling: touch;
 	}
-
+	
 	html{
 		scroll-behavior: smooth;
 	}
 	
-	html, body {
- 	 	overflow-x: hidden;
-	}
-	body {
-  		position: relative;
-	}
 	nav .fas{
-		display: block;
-		font-size: 25px;
+	display: block;
+	font-size: 25px;
 	}
 
 	nav ul{
@@ -277,75 +238,27 @@ nav .fas{
 		font-size: 17px;
 	}
 
-	h2{
-		padding-left: 15px;
-		font-size:15px;
-	}
-
-	.low img{
+	.ima img{
 		padding: 1rem;
 		max-width: 100%;
 		height: auto;
 	}
 
-	.hig img{
-		padding: 1rem;
-		max-width: 100%;
-		height: auto;
-	}
-
-	.image1 img{
-		padding: 0.5rem;
-		max-width: 100%;
-		height: auto;
-	}
-
-	.image2 img{
-		padding: 0.5rem;
-		max-width: 100%;
-		height: auto;
-	}
-
-	.mem h2{
+	.ima h2{
 		padding-left: 15px;
 		font-size:20px;
 	}
 
-	.mem img{
-		padding: 0.5rem;
-		max-width: 100%;
-		height: auto;
-	}
-
-	.mem video{
-		padding: 0.5rem;
-		width: 80%;
-		height: auto;
-	}
-
-	.non h2{
+	.des h3{
 		padding-left: 15px;
 		font-size:20px;
 	}
 
-	.non img{
-		padding: 0.5rem;
-		max-width: 100%;
-		height: auto;
+	.des p{
+		padding: 15px;
+		font-size: 17px;
 	}
-
-	.non video{
-		padding: 0.5rem;
-		width: 80%;
-		height: auto;
-	}
-
-	.image5 img{
-		padding: 0.5rem;
-		max-width: 100%;
-		height: auto;
-	}
-
+	
 	.copyright{
 		font-size: 14px;
 	}

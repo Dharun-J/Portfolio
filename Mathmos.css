@@ -293,56 +293,10 @@ nav .fas{
 		max-width: 100%;
 		height: auto;
 	}
-
-	.image1 img{
-		padding: 0.5rem;
-		max-width: 100%;
-		height: auto;
-	}
-
-	.image2 img{
-		padding: 0.5rem;
-		max-width: 100%;
-		height: auto;
-	}
-
-	.mem h2{
-		padding-left: 15px;
-		font-size:20px;
-	}
-
-	.mem img{
-		padding: 0.5rem;
-		max-width: 100%;
-		height: auto;
-	}
-
-	.mem video{
+	
+	.math video{
 		padding: 0.5rem;
 		width: 80%;
-		height: auto;
-	}
-
-	.non h2{
-		padding-left: 15px;
-		font-size:20px;
-	}
-
-	.non img{
-		padding: 0.5rem;
-		max-width: 100%;
-		height: auto;
-	}
-
-	.non video{
-		padding: 0.5rem;
-		width: 80%;
-		height: auto;
-	}
-
-	.image5 img{
-		padding: 0.5rem;
-		max-width: 100%;
 		height: auto;
 	}
 
