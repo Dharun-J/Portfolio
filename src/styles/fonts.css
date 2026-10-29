@@ -3,7 +3,7 @@
 /* Primary Font Family: GC EPICPRO Demo */
 @font-face {
   font-family: 'GC EPICPRO Demo';
-  src: url('/src/assets/fonts/GC-EPICPRO-Demo-BF6891cc5419ab8.ttf') format('truetype');
+  src: url('../assets/fonts/GC-EPICPRO-Demo-BF6891cc5419ab8.ttf') format('truetype');
   font-weight: 800;
   font-style: normal;
   font-display: swap;
@@ -12,7 +12,7 @@
 /* Secondary Font Family: Zalando Sans Expanded */
 @font-face {
   font-family: 'Zalando Sans Expanded';
-  src: url('/src/assets/fonts/ZalandoSansExpanded-Regular.ttf') format('truetype');
+  src: url('../assets/fonts/ZalandoSansExpanded-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -20,7 +20,7 @@
 
 @font-face {
   font-family: 'Zalando Sans Expanded';
-  src: url('/src/assets/fonts/ZalandoSansExpanded-Medium.ttf') format('truetype');
+  src: url('../assets/fonts/ZalandoSansExpanded-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -28,7 +28,7 @@
 
 @font-face {
   font-family: 'Zalando Sans Expanded';
-  src: url('/src/assets/fonts/ZalandoSansExpanded-SemiBold.ttf') format('truetype');
+  src: url('../assets/fonts/ZalandoSansExpanded-SemiBold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -36,7 +36,7 @@
 
 @font-face {
   font-family: 'Zalando Sans Expanded';
-  src: url('/src/assets/fonts/ZalandoSansExpanded-Bold.ttf') format('truetype');
+  src: url('../assets/fonts/ZalandoSansExpanded-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -44,7 +44,7 @@
 
 @font-face {
   font-family: 'Zalando Sans Expanded';
-  src: url('/src/assets/fonts/ZalandoSansExpanded-ExtraBold.ttf') format('truetype');
+  src: url('../assets/fonts/ZalandoSansExpanded-ExtraBold.ttf') format('truetype');
   font-weight: 800;
   font-style: normal;
   font-display: swap;
@@ -52,7 +52,7 @@
 
 @font-face {
   font-family: 'Zalando Sans Expanded';
-  src: url('/src/assets/fonts/ZalandoSansExpanded-Black.ttf') format('truetype');
+  src: url('../assets/fonts/ZalandoSansExpanded-Black.ttf') format('truetype');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -61,7 +61,7 @@
 /* Tertiary Font Family: MADE Okine Sans PERSONAL USE */
 @font-face {
   font-family: 'MADE Okine Sans PERSONAL USE';
-  src: url('/src/assets/fonts/MADEOkineSansPERSONALUSE-Light.otf') format('opentype');
+  src: url('../assets/fonts/MADEOkineSansPERSONALUSE-Light.otf') format('opentype');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -69,7 +69,7 @@
 
 @font-face {
   font-family: 'MADE Okine Sans PERSONAL USE';
-  src: url('/src/assets/fonts/MADEOkineSansPERSONALUSE-Regular.otf') format('opentype');
+  src: url('../assets/fonts/MADEOkineSansPERSONALUSE-Regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -77,7 +77,7 @@
 
 @font-face {
   font-family: 'MADE Okine Sans PERSONAL USE';
-  src: url('/src/assets/fonts/MADEOkineSansPERSONALUSE-Medium.otf') format('opentype');
+  src: url('../assets/fonts/MADEOkineSansPERSONALUSE-Medium.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -85,7 +85,7 @@
 
 @font-face {
   font-family: 'MADE Okine Sans PERSONAL USE';
-  src: url('/src/assets/fonts/MADEOkineSansPERSONALUSE-Bold.otf') format('opentype');
+  src: url('../assets/fonts/MADEOkineSansPERSONALUSE-Bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -93,7 +93,7 @@
 
 @font-face {
   font-family: 'MADE Okine Sans PERSONAL USE';
-  src: url('/src/assets/fonts/MADEOkineSansPERSONALUSE-Black.otf') format('opentype');
+  src: url('../assets/fonts/MADEOkineSansPERSONALUSE-Black.otf') format('opentype');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
