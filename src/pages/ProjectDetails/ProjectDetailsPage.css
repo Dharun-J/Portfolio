@@ -165,9 +165,12 @@
 
 .project-info-grid {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
-  gap: clamp(12px, 2vw, 40px);
+  gap: clamp(16px, 2.5vw, 36px);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .project-info-item {
@@ -175,6 +178,33 @@
   flex-direction: column;
   gap: 4px;
   min-width: 0;
+  box-sizing: border-box;
+}
+
+/* Balanced desktop proportions: Technologies & Focus receive more space */
+.project-info-item-duration {
+  flex: 0.8 1 110px;
+  min-width: 105px;
+}
+
+.project-info-item-type {
+  flex: 1 1 130px;
+  min-width: 110px;
+}
+
+.project-info-item-role {
+  flex: 1.4 1 160px;
+  min-width: 140px;
+}
+
+.project-info-item-tools {
+  flex: 2.2 1 220px;
+  min-width: 180px;
+}
+
+.project-info-item-focus {
+  flex: 2.2 1 220px;
+  min-width: 180px;
 }
 
 .project-info-label {
@@ -186,7 +216,7 @@
   letter-spacing: 0;
   color: var(--color-primary);
   user-select: none;
-  overflow-wrap: break-word;
+  white-space: nowrap;
 }
 
 .project-info-value {
@@ -197,8 +227,8 @@
   letter-spacing: 0;
   color: var(--color-on-secondary);
   user-select: none;
-  overflow-wrap: break-word;
-  word-break: break-word;
+  overflow-wrap: anywhere;
+  word-break: normal;
 }
 
 /* ==========================================================================
@@ -395,7 +425,13 @@
     box-sizing: border-box;
   }
 
-  .project-info-item {
+  .project-info-item,
+  .project-info-item-duration,
+  .project-info-item-type,
+  .project-info-item-role,
+  .project-info-item-tools,
+  .project-info-item-focus {
+    flex: none;
     min-width: 0;
     width: 100%;
     box-sizing: border-box;
@@ -409,14 +445,14 @@
   .project-info-label {
     font-size: clamp(14px, 3.6vw, 16px);
     line-height: 1.25;
-    overflow-wrap: break-word;
+    white-space: nowrap;
   }
 
   .project-info-value {
     font-size: clamp(12.5px, 3.1vw, 14px);
     line-height: 1.45;
-    overflow-wrap: break-word;
-    word-break: break-word;
+    overflow-wrap: anywhere;
+    word-break: normal;
   }
 
   .project-details-image-area {

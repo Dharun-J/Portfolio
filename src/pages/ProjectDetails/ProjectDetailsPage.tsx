@@ -123,27 +123,27 @@ export const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({
         >
           <div className="project-info-grid">
             {project.duration ? (
-              <div className="project-info-item">
+              <div className="project-info-item project-info-item-duration">
                 <span className="project-info-label">Duration:</span>
                 <span className="project-info-value">{project.duration}</span>
               </div>
             ) : null}
-            <div className="project-info-item">
+            <div className="project-info-item project-info-item-role">
               <span className="project-info-label">Role:</span>
               <span className="project-info-value">{project.role}</span>
             </div>
-            <div className="project-info-item">
+            <div className="project-info-item project-info-item-tools">
               <span className="project-info-label">
                 {project.id === 'chat' || project.iconType === 'code' ? 'Technologies:' : 'Tools:'}
               </span>
               <span className="project-info-value">{project.tools}</span>
             </div>
-            <div className="project-info-item">
+            <div className="project-info-item project-info-item-type">
               <span className="project-info-label">Type:</span>
               <span className="project-info-value">{project.type}</span>
             </div>
             {project.focus ? (
-              <div className="project-info-item">
+              <div className="project-info-item project-info-item-focus">
                 <span className="project-info-label">Focus:</span>
                 <span className="project-info-value">{project.focus}</span>
               </div>
