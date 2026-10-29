@@ -1053,8 +1053,20 @@
 
   .chat-workflow-steps {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
     gap: 8px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .chat-workflow-step {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .chat-step-name {
+    white-space: normal;
+    word-break: break-word;
   }
 
   .chat-workflow-arrow {
