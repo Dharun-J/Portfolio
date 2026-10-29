@@ -1,0 +1,16 @@
+@import './fonts.css';
+@import './tokens.css';
+@import './reset.css';
+
+body {
+  background-color: var(--color-secondary);
+  color: var(--color-on-secondary);
+  font-family: var(--font-tertiary);
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

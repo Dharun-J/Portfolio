@@ -1,0 +1,264 @@
+Build the next section of the portfolio immediately after the existing ABOUT ME section.
+
+IMPORTANT:
+The existing HERO and ABOUT ME sections are already completed.
+
+DO NOT modify, redesign, refactor, resize, reposition, or otherwise alter:
+- Hero section
+- About Me section
+- Their existing responsive behavior
+- Their existing typography, spacing, colors, or components
+
+Only add and implement this new section.
+
+Use the attached:
+- Desktop Skills/Work-With screenshot
+- Mobile Skills/Work-With screenshot
+- existing `tokens.json`
+
+The screenshots are the visual source of truth.
+
+SECTION
+Section heading:
+
+"What I Work With"
+
+Use:
+- H1 typography style
+- Tertiary color
+
+The section background uses:
+- Secondary color
+
+This section comes directly after About Me.
+The section should scale naturally according to the viewport.
+
+CARDS
+There are three cards:
+
+1. Web Development
+2. UI/UX Designing
+3. App Development
+
+The cards should be centered within the section with balanced spacing between them.
+Allow the cards and spacing to scale appropriately for different screen sizes.
+
+CARD CONTENT
+Each card contains:
+
+- icon
+- icon container
+- title
+- paragraph
+
+Icon container:
+Container size based on the screen
+Primary color treatment
+- preserve the visual style shown in the reference
+
+Use the appropriate icons shown in the supplied design references.
+
+Do not replace the icons with unrelated icons or decorative graphics.
+Titles:
+
+"Web Development"
+"UI/UX Designing"
+"App Development"
+
+Use:
+- H2 Variant typography style
+- Primary color
+
+Paragraph text:
+
+Web Development:
+"Building complete website with frontend and backend integration, focusing on functionality and usability."
+
+UI/UX Designing:
+"Designing user-friendly interfaces with wireframes, user flows, prototypes with a focus on clarity and usability."
+
+App Development:
+"Basic knowledge in Android app development, with an understanding of core concepts & implementation."
+
+Use:
+- Paragraph typography style
+- White text
+
+Preserve the text hierarchy shown in the references.
+
+GLASS MORPHISM
+The cards use a glassmorphism treatment.
+
+This is an important part of the visual design.
+
+The glass effect must be visibly present in the final output.
+
+Implement a refined glassmorphism effect using appropriate combinations of:
+
+- translucent card background
+- backdrop blur
+- subtle border
+- subtle light reflection/highlight
+- very soft shadow where appropriate
+
+The result should resemble the supplied reference.
+
+IMPORTANT:
+Do not make the cards look like plain black cards with a 1px border.
+
+The glass effect should actually be visible against the secondary/black background.
+
+Do not overdo the effect with:
+- excessive glow
+- strong gradients
+- neon effects
+- heavy shadows
+- exaggerated transparency
+
+Keep it subtle, premium.
+
+DESKTOP LAYOUT
+Follow the supplied desktop screenshot.
+
+Composition:
+
+                    What I Work With
+
+       [ Card ]       [ Card ]       [ Card ]
+
+The three cards should:
+- sit in one row on desktop
+- be centered
+- have consistent dimensions
+- have consistent spacing
+- have consistent internal padding
+- maintain equal visual weight
+
+The heading should have the same centered composition shown in the reference.
+
+Do not introduce additional content or sections.
+
+MOBILE LAYOUT
+Use the supplied mobile screenshot as the mobile source of truth.
+
+Do NOT simply shrink the desktop layout.
+
+On mobile, the cards should stack vertically as shown in the reference.
+
+Maintain:
+- heading hierarchy
+- card proportions
+- icon placement
+- title hierarchy
+- paragraph hierarchy
+- spacing
+- glassmorphism effect
+
+The cards should remain comfortably contained within the viewport.
+
+Do not allow:
+- horizontal overflow
+- text clipping
+- cards extending outside the viewport
+- distorted icons
+- excessively tiny text
+
+Scale typography, spacing, card dimensions, and icon containers appropriately for smaller screens while preserving the original design language.
+
+RESPONSIVE BEHAVIOR
+The section must work naturally across:
+
+- large desktop
+- 1440px desktop
+- smaller desktop/laptop
+- tablet
+- 768px
+- 600px
+- 480px
+- 390px
+- 375px
+- landscape phones
+
+Desktop:
+- three cards in one row when there is enough space.
+
+Tablet:
+- intelligently adapt the card sizing and spacing.
+- Do not allow cards to become unreasonably narrow.
+
+Mobile:
+- stack cards vertically.
+
+Use responsive breakpoints based on when the layout actually needs to change.
+
+Do not blindly use framework-default breakpoints if they produce a worse visual result.
+
+The section should scale according to the available viewport
+
+DESIGN TOKENS
+Use `tokens.json` as the design-system foundation.
+
+Use the appropriate semantic tokens for:
+
+- H1
+- H2 Variant
+- Paragraph
+- Primary
+- Secondary
+- Tertiary
+- Surface/background values where appropriate
+
+Do not create unnecessary new colors.
+
+Maintain the semantic relationship between the design tokens.
+
+Do not replace semantic token relationships with arbitrary hardcoded values when an appropriate token already exists.
+
+COMPONENT STRUCTURE
+Keep this section independent from the existing Hero and About sections.
+
+Create reusable components/data where appropriate, for example:
+
+WorkWithSection
+WorkWithCard
+
+The three cards should preferably be generated from structured data rather than duplicating the same markup three times.
+
+Make the card content easy to update later.
+
+Do not restructure or modify the existing Hero or About components.
+
+VISUAL FIDELITY
+The supplied screenshots define the intended design.
+
+Do not redesign the section.
+
+Do not add:
+- extra cards
+- extra text
+- unnecessary animations
+- decorative elements
+- random icons
+- additional colors
+- gradients that aren't part of the glass treatment
+- hover effects unless they are useful and consistent with the design
+
+The glassmorphism itself must remain visible.
+
+Preserve the clean black/blue/white visual language.
+
+VALIDATION
+After implementation:
+
+1. Verify the Hero is completely unchanged.
+2. Verify the About section is completely unchanged.
+3. Verify this section appears immediately after About.
+4. Compare desktop output with the supplied desktop reference.
+5. Compare mobile output with the supplied mobile reference.
+6. Test the glass effect at different viewport sizes.
+7. Test 375px, 390px, 480px, tablet, and desktop widths.
+8. Make sure there is no horizontal overflow.
+9. Make sure all card content remains contained.
+10. Make sure the three cards maintain consistent visual weight.
+
+Only make changes to this new section.

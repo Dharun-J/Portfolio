@@ -1,0 +1,378 @@
+/* WorkWithCard.css - Glassmorphic Card Styling */
+
+.work-with-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 40px 28px 44px;
+  border-radius: 28px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.055) 0%, rgba(255, 255, 255, 0.015) 100%), rgba(10, 11, 14, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1px solid rgba(255, 255, 255, 0.24);
+  border-left: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.18),
+              inset 0 0 16px 0 rgba(255, 255, 255, 0.02),
+              0 20px 44px -12px rgba(0, 0, 0, 0.85);
+  transition: transform 250ms cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 250ms ease,
+              box-shadow 250ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+  cursor: default;
+}
+
+/* Desktop Hover Interaction */
+@media (hover: hover) and (pointer: fine) {
+  .work-with-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(42, 79, 241, 0.55);
+    border-top-color: rgba(108, 139, 255, 0.75);
+    border-left-color: rgba(74, 107, 243, 0.65);
+    box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.25),
+                inset 0 0 18px 0 rgba(42, 79, 241, 0.12),
+                0 24px 48px -10px rgba(0, 0, 0, 0.88),
+                0 8px 30px -4px rgba(42, 79, 241, 0.35);
+  }
+}
+
+/* Mobile & Touch Active Interaction */
+.work-with-card.is-active {
+  transform: translateY(-5px);
+  border-color: rgba(42, 79, 241, 0.55);
+  border-top-color: rgba(108, 139, 255, 0.75);
+  border-left-color: rgba(74, 107, 243, 0.65);
+  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.25),
+              inset 0 0 18px 0 rgba(42, 79, 241, 0.12),
+              0 24px 48px -10px rgba(0, 0, 0, 0.88),
+              0 8px 30px -4px rgba(42, 79, 241, 0.35);
+}
+
+/* Icon Container */
+.work-with-card-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80px;
+  margin-bottom: 24px;
+  flex-shrink: 0;
+  overflow: visible;
+}
+
+.work-with-icon {
+  display: block;
+  height: 72px;
+  width: 72px;
+  object-fit: contain;
+  transition: transform 250ms cubic-bezier(0.16, 1, 0.3, 1),
+              filter 250ms ease;
+  will-change: transform;
+}
+
+/* Category-specific icon animations */
+
+/* Web Development: Code icon moves upward ~2.5px and slightly brightens */
+.work-with-icon-code {
+  height: 72px;
+  width: 72px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .work-with-card:hover .work-with-icon-code {
+    transform: translateY(-2.5px);
+    filter: brightness(1.22) drop-shadow(0 4px 12px rgba(42, 79, 241, 0.35));
+  }
+}
+
+.work-with-card.is-active .work-with-icon-code {
+  transform: translateY(-2.5px);
+  filter: brightness(1.22) drop-shadow(0 4px 12px rgba(42, 79, 241, 0.35));
+}
+
+/* UI/UX Designing: Figma icon scales to 1.07 */
+.work-with-icon-figma {
+  height: 72px;
+  width: 72px;
+  transform-origin: center center;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .work-with-card:hover .work-with-icon-figma {
+    transform: scale(1.07);
+  }
+}
+
+.work-with-card.is-active .work-with-icon-figma {
+  transform: scale(1.07);
+}
+
+/* App Development: Android icon moves upward ~2.5px */
+.work-with-icon-android {
+  height: 72px;
+  width: 72px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .work-with-card:hover .work-with-icon-android {
+    transform: translateY(-2.5px);
+  }
+}
+
+.work-with-card.is-active .work-with-icon-android {
+  transform: translateY(-2.5px);
+}
+
+/* Title: H2 Variant typography style & Primary Color (Centered) */
+.work-with-card-title {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-semibold);
+  font-size: 30px;
+  line-height: 1.2;
+  color: var(--color-primary);
+  margin: 0 0 18px 0;
+  text-align: center;
+  letter-spacing: var(--letter-spacing-xs);
+  width: 100%;
+}
+
+/* Paragraph: Paragraph typography style & White Text (LEFT ALIGNED) */
+.work-with-card-description {
+  font-family: var(--font-tertiary);
+  font-weight: var(--font-weight-regular);
+  font-size: 19px;
+  line-height: 1.45;
+  color: var(--color-on-secondary);
+  text-align: left;
+  margin: 0;
+  width: 100%;
+  max-width: 320px;
+  overflow-wrap: break-word;
+}
+
+/* Large Tablet / Laptop adjustments (921px to 1280px) */
+@media (max-width: 1280px) {
+  .work-with-card {
+    padding: 36px 20px 40px;
+  }
+
+  .work-with-card-icon-container {
+    height: 72px;
+    margin-bottom: 20px;
+  }
+
+  .work-with-icon {
+    height: 64px;
+    width: 64px;
+  }
+
+  .work-with-card-title {
+    font-size: 26px;
+    margin-bottom: 16px;
+  }
+
+  .work-with-card-description {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .work-with-card {
+    padding: 32px 16px 36px;
+  }
+
+  .work-with-card-icon-container {
+    height: 68px;
+    margin-bottom: 18px;
+  }
+
+  .work-with-icon {
+    height: 60px;
+    width: 60px;
+  }
+
+  .work-with-card-title {
+    font-size: 23px;
+    margin-bottom: 14px;
+  }
+
+  .work-with-card-description {
+    font-size: 16px;
+  }
+}
+
+/* Stacked Viewports (<= 920px) */
+@media (max-width: 920px) {
+  .work-with-card {
+    padding: 32px 28px 36px;
+    border-radius: 26px;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .work-with-card-icon-container {
+    height: 64px;
+    margin-bottom: 18px;
+  }
+
+  .work-with-icon {
+    height: 56px;
+    width: 56px;
+  }
+
+  .work-with-card-title {
+    font-size: 22px;
+    margin-bottom: 14px;
+  }
+
+  .work-with-card-description {
+    font-size: 15.5px;
+    max-width: 320px;
+  }
+}
+
+/* Mobile (<= 600px) */
+@media (max-width: 600px) {
+  .work-with-card {
+    padding: 28px 24px 32px;
+    border-radius: 24px;
+    max-width: 400px;
+  }
+
+  .work-with-card-icon-container {
+    height: 58px;
+    margin-bottom: 16px;
+  }
+
+  .work-with-icon {
+    height: 52px;
+    width: 52px;
+  }
+
+  .work-with-card-title {
+    font-size: 21px;
+    margin-bottom: 13px;
+  }
+
+  .work-with-card-description {
+    font-size: 15px;
+  }
+}
+
+/* Phone (<= 480px) */
+@media (max-width: 480px) {
+  .work-with-card {
+    padding: 26px 20px 30px;
+    border-radius: 22px;
+    max-width: 380px;
+  }
+
+  .work-with-card-icon-container {
+    height: 54px;
+    margin-bottom: 15px;
+  }
+
+  .work-with-icon {
+    height: 48px;
+    width: 48px;
+  }
+
+  .work-with-card-title {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .work-with-card-description {
+    font-size: 14.5px;
+  }
+}
+
+/* Small Phone (<= 390px) */
+@media (max-width: 390px) {
+  .work-with-card {
+    padding: 24px 18px 26px;
+    border-radius: 20px;
+    max-width: 350px;
+  }
+
+  .work-with-card-icon-container {
+    height: 50px;
+    margin-bottom: 14px;
+  }
+
+  .work-with-icon {
+    height: 44px;
+    width: 44px;
+  }
+
+  .work-with-card-title {
+    font-size: 19px;
+    margin-bottom: 11px;
+  }
+
+  .work-with-card-description {
+    font-size: 14px;
+    line-height: 1.42;
+  }
+}
+
+/* Extra Small Phone (<= 375px) */
+@media (max-width: 375px) {
+  .work-with-card {
+    padding: 22px 16px 24px;
+  }
+
+  .work-with-card-title {
+    font-size: 18px;
+  }
+
+  .work-with-card-description {
+    font-size: 13.5px;
+  }
+}
+
+/* Accessibility: Respect Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+  .work-with-card {
+    transition: none !important;
+    transform: none !important;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .work-with-card:hover {
+      transform: none !important;
+    }
+  }
+
+  .work-with-card.is-active {
+    transform: none !important;
+  }
+
+  .work-with-icon {
+    transition: none !important;
+    transform: none !important;
+    filter: none !important;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .work-with-card:hover .work-with-icon-code,
+    .work-with-card:hover .work-with-icon-figma,
+    .work-with-card:hover .work-with-icon-android {
+      transform: none !important;
+      filter: none !important;
+    }
+  }
+
+  .work-with-card.is-active .work-with-icon-code,
+  .work-with-card.is-active .work-with-icon-figma,
+  .work-with-card.is-active .work-with-icon-android {
+    transform: none !important;
+    filter: none !important;
+  }
+}

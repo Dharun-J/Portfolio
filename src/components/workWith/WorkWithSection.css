@@ -1,0 +1,214 @@
+/* WorkWithSection.css - "What I Work With" Section */
+
+.work-with-section {
+  width: 100%;
+  background-color: var(--color-secondary);
+  padding: 68px 0 92px 0;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: visible;
+  box-sizing: border-box;
+}
+
+.work-with-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 clamp(24px, 5.5vw, 80px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Heading: H1 Typography Style & Tertiary Color (Centered) */
+.work-with-heading {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-semibold);
+  font-size: 56px;
+  line-height: 1.15;
+  color: var(--color-tertiary);
+  text-align: center;
+  letter-spacing: var(--letter-spacing-xs);
+  margin: 0 0 48px 0;
+}
+
+/* Cards Grid: 3 cards in one row on desktop */
+.work-with-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 36px;
+  width: 100%;
+  max-width: 1280px;
+  align-items: stretch;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* Laptop / Desktop scaling (1025px to 1366px) */
+@media (max-width: 1366px) {
+  .work-with-section {
+    padding: 60px 0 84px 0;
+  }
+
+  .work-with-heading {
+    font-size: 48px;
+    margin-bottom: 42px;
+  }
+
+  .work-with-cards-grid {
+    gap: 28px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .work-with-section {
+    padding: 54px 0 76px 0;
+  }
+
+  .work-with-container {
+    padding: 0 32px;
+  }
+
+  .work-with-heading {
+    font-size: 42px;
+    margin-bottom: 36px;
+  }
+
+  .work-with-cards-grid {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .work-with-heading {
+    font-size: 38px;
+    margin-bottom: 32px;
+  }
+}
+
+/* Tablet & Mobile (<= 920px): Stack cards vertically to prevent narrow squeezing */
+@media (max-width: 920px) {
+  .work-with-section {
+    padding: 48px 0 68px 0;
+  }
+
+  .work-with-container {
+    padding: 0 24px;
+  }
+
+  .work-with-heading {
+    font-size: 34px;
+    margin-bottom: 28px;
+  }
+
+  .work-with-cards-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    max-width: 440px;
+  }
+}
+
+/* Tablet / Large Phone (<= 768px) */
+@media (max-width: 768px) {
+  .work-with-section {
+    padding: 44px 0 60px 0;
+  }
+
+  .work-with-container {
+    padding: 0 20px;
+  }
+
+  .work-with-heading {
+    font-size: 30px;
+    margin-bottom: 24px;
+  }
+
+  .work-with-cards-grid {
+    gap: 22px;
+    max-width: 420px;
+  }
+}
+
+/* Small Tablet / Large Phone (<= 600px) */
+@media (max-width: 600px) {
+  .work-with-section {
+    padding: 40px 0 54px 0;
+  }
+
+  .work-with-heading {
+    font-size: 28px;
+    margin-bottom: 22px;
+  }
+
+  .work-with-cards-grid {
+    gap: 20px;
+    max-width: 400px;
+  }
+}
+
+/* Phone (<= 480px) */
+@media (max-width: 480px) {
+  .work-with-section {
+    padding: 36px 0 48px 0;
+  }
+
+  .work-with-container {
+    padding: 0 16px;
+  }
+
+  .work-with-heading {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+
+  .work-with-cards-grid {
+    gap: 18px;
+    max-width: 380px;
+  }
+}
+
+/* Small Mobile (<= 390px) */
+@media (max-width: 390px) {
+  .work-with-section {
+    padding: 32px 0 44px 0;
+  }
+
+  .work-with-container {
+    padding: 0 14px;
+  }
+
+  .work-with-heading {
+    font-size: 24px;
+    margin-bottom: 18px;
+  }
+
+  .work-with-cards-grid {
+    gap: 16px;
+    max-width: 350px;
+  }
+}
+
+/* Extra Small Mobile (<= 375px) */
+@media (max-width: 375px) {
+  .work-with-section {
+    padding: 28px 0 40px 0;
+  }
+
+  .work-with-container {
+    padding: 0 12px;
+  }
+
+  .work-with-heading {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+
+  .work-with-cards-grid {
+    gap: 14px;
+  }
+}

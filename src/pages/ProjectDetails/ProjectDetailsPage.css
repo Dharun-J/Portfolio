@@ -1,0 +1,907 @@
+/* ProjectDetailsPage.css - Reusable Project Details / Case Study Template */
+
+.project-details-page {
+  position: relative;
+  width: 100%;
+  background-color: var(--color-secondary);
+  color: var(--color-on-secondary);
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.project-details-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 48px 0;
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   Circular Previous / Next Navigation with Subtle Blue Hover State
+   ========================================================================== */
+.project-details-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: clamp(24px, 3.2vw, 48px);
+  margin-bottom: clamp(28px, 3.5vw, 52px);
+}
+
+.project-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(8px, 0.85vw, 12px);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  color: var(--color-on-secondary);
+  font-family: var(--font-tertiary);
+  font-weight: var(--font-weight-regular);
+  font-size: clamp(14px, 1.4vw, 20px);
+  line-height: 1;
+  letter-spacing: 0;
+  transition: color 0.25s ease,
+              opacity 0.25s ease,
+              transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+.project-nav-btn:hover {
+  color: var(--color-primary);
+  opacity: 1;
+}
+
+.project-nav-prev:hover {
+  transform: translateX(-4px);
+}
+
+.project-nav-next:hover {
+  transform: translateX(4px);
+}
+
+.project-nav-btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.project-nav-icon {
+  width: clamp(20px, 1.7vw, 24px);
+  height: clamp(20px, 1.7vw, 24px);
+  display: block;
+  flex-shrink: 0;
+  transition: filter 0.25s ease;
+}
+
+.project-nav-icon-prev {
+  filter: brightness(0) invert(1);
+}
+
+.project-nav-icon-next {
+  filter: none;
+}
+
+/* Subtle primary blue transition on hover for both left & right icons */
+.project-nav-btn:hover .project-nav-icon {
+  filter: brightness(0) invert(24%) sepia(95%) saturate(3475%) hue-rotate(228deg) brightness(97%) contrast(101%);
+}
+
+.project-nav-label {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   Project Title (H3 Style)
+   ========================================================================== */
+.project-details-header {
+  width: 100%;
+  margin-bottom: clamp(24px, 3vw, 42px);
+}
+
+.project-details-title {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-semibold);
+  font-size: clamp(20px, 2.1vw, 24px);
+  line-height: 1.25;
+  letter-spacing: var(--letter-spacing-xs);
+  color: var(--color-on-secondary);
+  margin: 0;
+  text-align: left;
+  user-select: none;
+}
+
+.project-details-subtitle {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-medium);
+  font-size: clamp(14px, 1.35vw, 17px);
+  line-height: 1.4;
+  color: var(--color-primary);
+  margin: 8px 0 0 0;
+  letter-spacing: 0.01em;
+}
+
+/* ==========================================================================
+   Summary Section
+   ========================================================================== */
+.project-details-summary {
+  width: 100%;
+}
+
+.project-details-heading {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-medium);
+  font-style: italic;
+  font-size: clamp(17px, 1.55vw, 20px);
+  line-height: 1.2;
+  letter-spacing: 0;
+  color: var(--color-primary);
+  margin: 0 0 10px 0;
+  user-select: none;
+}
+
+.project-details-body {
+  font-family: var(--font-tertiary);
+  font-weight: var(--font-weight-light);
+  font-size: clamp(16px, 1.55vw, 20px);
+  line-height: 1.45;
+  letter-spacing: 0;
+  color: var(--color-on-secondary);
+  margin: 0;
+}
+
+/* ==========================================================================
+   Project Information Metadata Grid
+   ========================================================================== */
+.project-details-info {
+  width: 100%;
+  margin-top: clamp(24px, 3.2vw, 44px);
+  margin-bottom: clamp(32px, 4vw, 56px);
+}
+
+.project-info-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: clamp(12px, 2vw, 40px);
+}
+
+.project-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.project-info-label {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-medium);
+  font-style: italic;
+  font-size: clamp(16px, 1.55vw, 20px);
+  line-height: 1.2;
+  letter-spacing: 0;
+  color: var(--color-primary);
+  user-select: none;
+}
+
+.project-info-value {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-light);
+  font-size: clamp(13px, 1.2vw, 16px);
+  line-height: 1.25;
+  letter-spacing: 0;
+  color: var(--color-on-secondary);
+  user-select: none;
+}
+
+/* ==========================================================================
+   Central Reusable Project Image Area (Responsive & Orientation-Aware)
+   ========================================================================== */
+.project-details-image-area {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: clamp(28px, 4vw, 56px) auto;
+  box-sizing: border-box;
+}
+
+.project-details-image-area.is-landscape {
+  max-width: 1000px;
+}
+
+.project-details-image-area.is-portrait {
+  max-width: 400px;
+}
+
+.project-details-image-area.is-phone-group,
+.project-details-image-area.is-wide {
+  max-width: 960px;
+}
+
+.project-details-img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: min(640px, 75vh);
+  object-fit: contain;
+  border-radius: var(--radius-l);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+  user-select: none;
+  margin: 0 auto;
+}
+
+.project-details-image-area.is-portrait .project-details-img {
+  width: auto;
+  max-height: min(620px, 75vh);
+}
+
+/* ==========================================================================
+   Impact Section
+   ========================================================================== */
+.project-details-impact {
+  width: 100%;
+  margin-top: clamp(28px, 4vw, 56px);
+  margin-bottom: clamp(36px, 4.8vw, 68px);
+}
+
+/* ==========================================================================
+   Back To My Work Button (Matches View More button variant proportions)
+   ========================================================================== */
+.project-details-action {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: clamp(32px, 3.8vw, 52px);
+}
+
+.project-details-back-btn {
+  font-family: var(--font-tertiary);
+  font-weight: var(--font-weight-regular);
+  font-size: 20px;
+  line-height: 1;
+  color: var(--color-on-primary);
+  background-color: var(--color-primary);
+  border: none;
+  outline: none;
+  border-radius: 9999px;
+  padding: 12px 32px;
+  height: 44px;
+  min-width: 212px;
+  box-sizing: border-box;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(42, 79, 241, 0.3);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.25s ease,
+              box-shadow 0.25s ease;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-details-back-btn:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 4px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .project-details-back-btn:hover {
+    transform: translateY(-2px);
+    background-color: #2444d3;
+    box-shadow: 0 8px 26px rgba(42, 79, 241, 0.45);
+  }
+}
+
+.project-details-back-btn:active {
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   Footer Copyright (Natural bottom ending without huge gap)
+   ========================================================================== */
+.project-details-copyright {
+  font-family: var(--font-tertiary);
+  font-weight: var(--font-weight-regular);
+  font-size: clamp(14px, 1.4vw, 20px);
+  line-height: 1.4;
+  letter-spacing: 0;
+  color: var(--color-on-primary);
+  text-align: center;
+  user-select: none;
+  padding-bottom: clamp(36px, 4vw, 56px);
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   Responsive Adaptations
+   ========================================================================== */
+
+/* Tablet & Intermediate viewports */
+@media (max-width: 960px) {
+  .project-details-container {
+    padding: 0 36px 0;
+  }
+}
+
+/* Mobile Layout */
+@media (max-width: 640px) {
+  .project-details-container {
+    padding: 0 32px 0;
+  }
+
+  .project-details-nav {
+    padding-top: 24px;
+    margin-bottom: 28px;
+  }
+
+  .project-details-header {
+    margin-bottom: 24px;
+  }
+
+  .project-details-title {
+    font-size: clamp(20px, 5.5vw, 24px);
+  }
+
+  .project-details-heading {
+    font-size: clamp(16px, 4.4vw, 18px);
+    margin-bottom: 8px;
+  }
+
+  .project-details-body {
+    font-size: clamp(15px, 4vw, 17px);
+    line-height: 1.45;
+  }
+
+  .project-details-info {
+    margin-top: 24px;
+    margin-bottom: 28px;
+  }
+
+  .project-info-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    flex-wrap: nowrap;
+  }
+
+  .project-info-label {
+    font-size: clamp(14px, 3.6vw, 16px);
+  }
+
+  .project-info-value {
+    font-size: clamp(12px, 3vw, 14px);
+  }
+
+  .project-details-image-area {
+    margin: 24px auto;
+  }
+
+  .project-details-img {
+    border-radius: var(--radius-m);
+  }
+
+  .project-details-impact {
+    margin-top: 28px;
+    margin-bottom: 32px;
+  }
+
+  .project-details-action {
+    margin-bottom: 28px;
+  }
+
+  .project-details-back-btn {
+    font-size: 16px;
+    padding: 10px 24px;
+    height: 38px;
+    min-width: 180px;
+  }
+
+  .project-details-copyright {
+    font-size: 14px;
+    padding-bottom: 32px;
+  }
+}
+
+/* Extra small mobile */
+@media (max-width: 380px) {
+  .project-details-container {
+    padding: 0 20px 0;
+  }
+
+  .project-info-grid {
+    flex-wrap: wrap;
+    gap: 12px 20px;
+  }
+}
+
+/* ==========================================================================
+   Header Dark Treatment (#1A1A1A) on Project Details Page ONLY
+   ========================================================================== */
+.page-project-details {
+  background-color: var(--color-secondary);
+}
+
+.page-project-details .site-header,
+.portfolio-app:has(.project-details-page) .site-header {
+  background-color: #1A1A1A;
+}
+
+@media (max-width: 768px) {
+  .page-project-details .site-header,
+  .portfolio-app:has(.project-details-page) .site-header {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    height: auto;
+    background-color: #1A1A1A;
+    padding: 28px 0 0 0;
+  }
+
+  .page-project-details .site-logo,
+  .portfolio-app:has(.project-details-page) .site-logo {
+    color: var(--color-on-secondary);
+  }
+
+  .page-project-details .hamburger-bar,
+  .portfolio-app:has(.project-details-page) .hamburger-bar {
+    background-color: var(--color-on-secondary);
+  }
+}
+
+/* ==========================================================================
+   SoundZone Editorial Case Study
+   ========================================================================== */
+.soundzone-editorial-case-study {
+  width: 100%;
+  margin-top: clamp(32px, 4vw, 56px);
+  margin-bottom: clamp(48px, 6vw, 84px);
+}
+
+/* 1. Full-Width Complete Website Showcase */
+.soundzone-showcase-section {
+  width: 100%;
+  margin-top: clamp(24px, 3.2vw, 44px);
+  margin-bottom: clamp(64px, 8vw, 112px);
+}
+
+.soundzone-showcase-meta {
+  width: 100%;
+  margin-bottom: clamp(24px, 3.2vw, 40px);
+}
+
+.soundzone-showcase-meta .project-details-heading {
+  margin: 0 0 12px 0;
+  line-height: 1.35;
+  padding-top: 2px;
+  overflow: visible;
+}
+
+.soundzone-showcase-caption {
+  font-family: var(--font-tertiary);
+  font-weight: var(--font-weight-light);
+  font-size: clamp(16px, 1.55vw, 20px);
+  line-height: 1.45;
+  letter-spacing: 0;
+  color: var(--color-on-secondary);
+  margin: 0;
+  width: 100%;
+}
+
+.soundzone-full-website-figure {
+  width: 82%;
+  max-width: 1150px;
+  margin: 0 auto;
+  border-radius: var(--radius-l);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65);
+  background-color: #060606;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.soundzone-full-website-img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  user-select: none;
+}
+
+/* 2. Alternating Two-Column Visual Sections */
+.soundzone-editorial-pairs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(64px, 8vw, 120px);
+  margin-bottom: clamp(64px, 8vw, 120px);
+}
+
+.soundzone-pair-row {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: clamp(36px, 5.5vw, 72px);
+  align-items: center;
+  width: 100%;
+}
+
+.soundzone-pair-row.is-reversed {
+  grid-template-columns: 1.15fr 1fr;
+}
+
+.soundzone-pair-row.is-reversed .soundzone-pair-content {
+  order: 2;
+}
+
+.soundzone-pair-row.is-reversed .soundzone-pair-media {
+  order: 1;
+}
+
+.soundzone-pair-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.soundzone-section-tag {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-medium);
+  font-style: italic;
+  font-size: clamp(13px, 1.2vw, 15px);
+  line-height: 1.2;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  user-select: none;
+}
+
+.soundzone-pair-title {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-semibold);
+  font-size: clamp(20px, 2.1vw, 26px);
+  line-height: 1.25;
+  color: var(--color-on-secondary);
+  margin: 0 0 6px 0;
+  letter-spacing: var(--letter-spacing-xs);
+  user-select: none;
+}
+
+.soundzone-pair-body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.soundzone-pair-body p {
+  font-family: var(--font-tertiary);
+  font-weight: var(--font-weight-light);
+  font-size: clamp(15px, 1.35vw, 17px);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0;
+}
+
+.soundzone-pair-media {
+  margin: 0;
+  width: 100%;
+  border-radius: var(--radius-l);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.5);
+  background-color: #080808;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .soundzone-pair-media:hover {
+    transform: translateY(-2px);
+    border-color: rgba(42, 79, 241, 0.35);
+    box-shadow: 0 20px 52px rgba(0, 0, 0, 0.6);
+  }
+}
+
+.soundzone-pair-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  user-select: none;
+}
+
+/* 3. Design Rationale: The Thinking Behind the Visual System */
+.soundzone-rationale-section {
+  width: 100%;
+  padding-top: clamp(36px, 4.5vw, 56px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: clamp(48px, 6vw, 80px);
+}
+
+.soundzone-rationale-header {
+  width: 100%;
+  margin-bottom: clamp(28px, 3.5vw, 44px);
+}
+
+.soundzone-rationale-heading {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-semibold);
+  font-size: clamp(22px, 2.4vw, 30px);
+  line-height: 1.25;
+  color: var(--color-on-secondary);
+  margin: 0 0 12px 0;
+  letter-spacing: var(--letter-spacing-xs);
+  user-select: none;
+}
+
+.soundzone-rationale-lead {
+  font-family: var(--font-tertiary);
+  font-weight: var(--font-weight-light);
+  font-size: clamp(15px, 1.35vw, 18px);
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+  max-width: 820px;
+}
+
+.soundzone-rationale-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: clamp(28px, 3.5vw, 44px);
+}
+
+.soundzone-rationale-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.soundzone-rationale-item-title {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-medium);
+  font-style: italic;
+  font-size: clamp(16px, 1.4vw, 18px);
+  line-height: 1.25;
+  color: var(--color-primary);
+  margin: 0;
+  user-select: none;
+}
+
+.soundzone-rationale-item-body {
+  font-family: var(--font-tertiary);
+  font-weight: var(--font-weight-light);
+  font-size: clamp(14px, 1.25vw, 16px);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.84);
+  margin: 0;
+}
+
+/* ==========================================================================
+   SoundZone Responsive Rules
+   ========================================================================== */
+@media (max-width: 860px) {
+  .soundzone-full-website-figure {
+    width: 90%;
+  }
+
+  .soundzone-editorial-pairs {
+    gap: 52px;
+    margin-bottom: 56px;
+  }
+
+  .soundzone-pair-row,
+  .soundzone-pair-row.is-reversed {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Natural reading order: Content on top, then screenshot on mobile */
+  .soundzone-pair-row .soundzone-pair-content,
+  .soundzone-pair-row.is-reversed .soundzone-pair-content {
+    order: 1;
+  }
+
+  .soundzone-pair-row .soundzone-pair-media,
+  .soundzone-pair-row.is-reversed .soundzone-pair-media {
+    order: 2;
+  }
+
+  .soundzone-rationale-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .soundzone-full-website-figure {
+    width: 100%;
+    border-radius: var(--radius-m);
+  }
+
+  .soundzone-pair-media {
+    border-radius: var(--radius-m);
+  }
+
+  .soundzone-pair-title {
+    font-size: clamp(19px, 5vw, 22px);
+  }
+
+  .soundzone-pair-body p {
+    font-size: clamp(14px, 3.8vw, 16px);
+  }
+
+  .soundzone-rationale-heading {
+    font-size: clamp(20px, 5.2vw, 24px);
+  }
+}
+
+/* ==========================================================================
+   Pet Adoption Editorial Case Study
+   ========================================================================== */
+.pet-editorial-case-study {
+  width: 100%;
+  margin-top: clamp(32px, 4vw, 56px);
+  margin-bottom: clamp(48px, 6vw, 84px);
+}
+
+.pet-pair-media-tall {
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.pet-pair-media-portrait {
+  max-width: 460px;
+  margin: 0 auto;
+}
+
+@media (max-width: 860px) {
+  .pet-pair-media-tall,
+  .pet-pair-media-portrait {
+    max-width: 100%;
+  }
+}
+
+/* ==========================================================================
+   E-Commerce Mobile App Editorial Case Study
+   ========================================================================== */
+.ecommerce-editorial-case-study {
+  width: 100%;
+  margin-top: clamp(32px, 4vw, 56px);
+  margin-bottom: clamp(48px, 6vw, 84px);
+}
+
+.ecom-hero-figure {
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* User Journey Video Walkthroughs */
+.ecom-journeys-section {
+  width: 100%;
+  padding-top: clamp(36px, 4.5vw, 56px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: clamp(64px, 8vw, 112px);
+}
+
+.ecom-journeys-header {
+  width: 100%;
+  margin-bottom: clamp(32px, 4vw, 48px);
+}
+
+.ecom-journeys-lead {
+  font-family: var(--font-tertiary);
+  font-weight: var(--font-weight-light);
+  font-size: clamp(16px, 1.45vw, 18px);
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 12px 0 0 0;
+  max-width: 820px;
+}
+
+.ecom-videos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(24px, 3.5vw, 40px);
+  width: 100%;
+}
+
+.ecom-video-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #080808;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-l);
+  padding: clamp(20px, 2.5vw, 32px);
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.5);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .ecom-video-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(42, 79, 241, 0.35);
+    box-shadow: 0 24px 56px rgba(0, 0, 0, 0.65),
+                0 0 30px rgba(42, 79, 241, 0.12);
+  }
+}
+
+.ecom-video-meta {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  gap: 8px;
+}
+
+.ecom-video-pill {
+  display: inline-block;
+  align-self: flex-start;
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-medium);
+  font-style: italic;
+  font-size: clamp(12px, 1.1vw, 13px);
+  color: var(--color-primary);
+  letter-spacing: var(--letter-spacing-s);
+  text-transform: uppercase;
+}
+
+.ecom-video-title {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-semibold);
+  font-size: clamp(20px, 2.1vw, 24px);
+  line-height: 1.25;
+  color: var(--color-on-secondary);
+  margin: 0;
+  letter-spacing: var(--letter-spacing-xs);
+}
+
+.ecom-video-desc {
+  font-family: var(--font-tertiary);
+  font-weight: var(--font-weight-light);
+  font-size: clamp(14px, 1.25vw, 16px);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.84);
+  margin: 0;
+}
+
+.ecom-video-wrapper {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #000;
+  border-radius: var(--radius-m);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  margin: auto 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ecom-video-player {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: #000;
+}
+
+@media (max-width: 900px) {
+  .ecom-videos-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+

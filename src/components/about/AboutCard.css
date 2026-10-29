@@ -1,0 +1,88 @@
+.about-card {
+  position: relative;
+  background-color: var(--color-surface-variant);
+  border-radius: var(--radius-xl);
+  padding: clamp(40px, 4.2vw, 56px) clamp(36px, 4.5vw, 60px);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  /* Subtle, soft shadow creating gentle separation from the white Surface background */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06), 0 2px 8px rgba(0, 0, 0, 0.02);
+  transition: box-shadow 0.3s ease;
+}
+
+.about-card-body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.about-paragraph {
+  font-family: var(--font-tertiary);
+  font-weight: var(--font-weight-regular);
+  font-size: clamp(17px, 1.55vw, 22px);
+  line-height: 1.45;
+  color: var(--color-on-surface-variant);
+  margin: 0 0 clamp(16px, 1.8vw, 24px) 0;
+  letter-spacing: var(--letter-spacing-xs);
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+.about-card-tabs-wrapper {
+  margin-top: clamp(20px, 2.2vw, 32px);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Tablet adjustments */
+@media (min-width: 769px) and (max-width: 1023px) {
+  .about-card {
+    padding: 36px clamp(28px, 3.5vw, 40px);
+  }
+
+  .about-paragraph {
+    font-size: 18px;
+    line-height: 1.42;
+    margin-bottom: 18px;
+  }
+}
+
+/* Mobile Layout */
+@media (max-width: 768px) {
+  .about-card {
+    padding: 32px clamp(18px, 4.5vw, 26px);
+    border-radius: var(--radius-xl);
+  }
+
+  .about-paragraph {
+    font-size: clamp(15px, 3.8vw, 17px);
+    line-height: 1.42;
+    margin-bottom: 16px;
+  }
+
+  .about-card-tabs-wrapper {
+    margin-top: 20px;
+  }
+}
+
+/* Smaller mobile phones (<= 380px) */
+@media (max-width: 380px) {
+  .about-card {
+    padding: 26px 16px;
+  }
+
+  .about-paragraph {
+    font-size: 15px;
+    line-height: 1.38;
+    margin-bottom: 14px;
+  }
+
+  .about-card-tabs-wrapper {
+    margin-top: 16px;
+  }
+}

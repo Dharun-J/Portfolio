@@ -1,0 +1,83 @@
+/**
+ * Design Tokens
+ * Generated directly from tokens.json
+ */
+
+:root {
+  /* Colors */
+  --color-primary: #2a4ff1;
+  --color-secondary: #000000;
+  --color-tertiary: #6c8bff;
+  --color-on-primary: #ffffff;
+  --color-on-secondary: #ffffff;
+  --color-surface: #ffffff;
+  --color-on-surface: #111111;
+  --color-surface-variant: #f3f5ff;
+  --color-on-surface-variant: #1a1a1a;
+  --color-on-tertiary: #ffffff;
+  --color-line: #d1d5db;
+
+  /* Font Families */
+  --font-primary: 'GC EPICPRO Demo', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-secondary: 'Zalando Sans Expanded', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-tertiary: 'MADE Okine Sans PERSONAL USE', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Font Weights */
+  --font-weight-thin: 100;
+  --font-weight-extra-light: 200;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+  --font-weight-black: 900;
+
+  /* Primitive Font Sizes */
+  --font-size-0: 12px;
+  --font-size-1: 14px;
+  --font-size-2: 16px;
+  --font-size-3: 18px;
+  --font-size-4: 20px;
+  --font-size-5: 22px;
+  --font-size-6: 24px;
+  --font-size-7: 25px;
+  --font-size-8: 28px;
+  --font-size-9: 32px;
+  --font-size-10: 36px;
+  --font-size-11: 48px;
+  --font-size-12: 56px;
+  --font-size-13: 120px;
+
+  /* Line Heights */
+  --line-height-xs: 16px;
+  --line-height-sm: 20px;
+  --line-height-md: 28px;
+  --line-height-lg: 35px;
+  --line-height-xl: 48px;
+  --line-height-2xl: 84px;
+  --line-height-3xl: 140px;
+
+  /* Letter Spacing */
+  --letter-spacing-xs: 0px;
+  --letter-spacing-sm: 1px;
+  --letter-spacing-md: 2px;
+  --letter-spacing-lg: 3px;
+  --letter-spacing-xl: 4px;
+  --letter-spacing-2xl: 5px;
+
+  /* Spacing */
+  --spacing-s: 8px;
+  --spacing-m: 16px;
+  --spacing-l: 24px;
+  --spacing-xl: 50px;
+
+  /* Radius */
+  --radius-s: 8px;
+  --radius-m: 12px;
+  --radius-l: 16px;
+  --radius-xl: 24px;
+
+  /* Header Bar */
+  --header-height: 88px;
+}

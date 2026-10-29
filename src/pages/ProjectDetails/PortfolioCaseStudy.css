@@ -1,0 +1,391 @@
+/* PortfolioCaseStudy.css - Premium Art-Directed Case Study for Personal Portfolio */
+
+.portfolio-editorial-case-study {
+  width: 100%;
+  margin-top: clamp(32px, 4vw, 56px);
+  margin-bottom: clamp(48px, 6vw, 84px);
+}
+
+/* Inline code highlighting */
+.portfolio-inline-code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.88em;
+  padding: 2px 6px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+  color: #8da4ff;
+}
+
+/* ==========================================================================
+   1. Hero Showcase Section (SoundZone-matching prominent layout)
+   ========================================================================== */
+.portfolio-hero-showcase {
+  width: 100%;
+  margin-top: clamp(24px, 3.2vw, 44px);
+  margin-bottom: clamp(64px, 8vw, 112px);
+}
+
+.portfolio-hero-figure {
+  width: 82%;
+  max-width: 1150px;
+  margin: 0 auto;
+  border-radius: var(--radius-l);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.75),
+              0 0 40px rgba(42, 79, 241, 0.12);
+  background-color: #060606;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .portfolio-hero-figure:hover {
+    transform: translateY(-3px);
+    border-color: rgba(42, 79, 241, 0.4);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.85),
+                0 0 50px rgba(42, 79, 241, 0.22);
+  }
+}
+
+.portfolio-hero-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 5760 / 4096;
+  object-fit: contain;
+  user-select: none;
+}
+
+/* ==========================================================================
+   2. Media Frames & Screen Containers
+   ========================================================================== */
+.portfolio-media-frame {
+  background-color: #080808;
+  padding: clamp(16px, 2.2vw, 24px);
+  box-sizing: border-box;
+  border-radius: var(--radius-m);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+}
+
+.portfolio-single-screen-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.portfolio-screen-tag {
+  align-self: flex-start;
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-medium);
+  font-style: italic;
+  font-size: 11px;
+  color: var(--color-primary);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.portfolio-screen-window {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #050507;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-desktop-screen-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  user-select: none;
+}
+
+.portfolio-screen-caption {
+  font-family: var(--font-tertiary);
+  font-weight: var(--font-weight-regular);
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  padding-top: 2px;
+}
+
+/* ==========================================================================
+   3. Section B: Responsive Duo Comparison (Desktop Work + Mobile Work)
+   ========================================================================== */
+.portfolio-responsive-duo {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  gap: clamp(14px, 1.8vw, 22px);
+  align-items: start;
+  width: 100%;
+}
+
+.portfolio-duo-desktop {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.portfolio-duo-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.portfolio-phone-mockup {
+  width: 100%;
+  max-width: 220px;
+  height: clamp(340px, 32vw, 440px);
+  border-radius: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background-color: #000;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.65);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(42, 79, 241, 0.4) transparent;
+}
+
+.portfolio-phone-mockup::-webkit-scrollbar {
+  width: 4px;
+}
+
+.portfolio-phone-mockup::-webkit-scrollbar-thumb {
+  background: rgba(42, 79, 241, 0.5);
+  border-radius: 4px;
+}
+
+.portfolio-phone-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  user-select: none;
+}
+
+/* ==========================================================================
+   4. Placeholder Content Disclosure Card
+   Subtle, professional, restrained
+   ========================================================================== */
+.portfolio-disclosure-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: clamp(16px, 2vw, 24px);
+  padding: clamp(12px, 1.5vw, 16px) clamp(14px, 1.8vw, 18px);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 3px solid var(--color-primary);
+  border-radius: var(--radius-m);
+  box-sizing: border-box;
+}
+
+.portfolio-disclosure-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--color-primary);
+}
+
+.portfolio-disclosure-icon {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+.portfolio-disclosure-text {
+  font-family: var(--font-tertiary);
+  font-weight: var(--font-weight-light);
+  font-size: clamp(13px, 1.15vw, 14px);
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.76);
+  margin: 0;
+}
+
+/* ==========================================================================
+   5. Section D: Final Responsive Experience Showcase
+   ========================================================================== */
+.portfolio-final-experience-section {
+  width: 100%;
+  padding-top: clamp(48px, 6vw, 84px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: clamp(64px, 8vw, 112px);
+}
+
+.portfolio-final-header {
+  width: 100%;
+  margin-bottom: clamp(36px, 4.5vw, 56px);
+}
+
+.portfolio-experience-title {
+  font-size: clamp(24px, 2.8vw, 34px);
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+.portfolio-experience-lead {
+  font-family: var(--font-tertiary);
+  font-weight: var(--font-weight-light);
+  font-size: clamp(16px, 1.55vw, 18px);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.82);
+  margin: 0;
+  max-width: 880px;
+}
+
+/* Primary Desktop Visual: Comprehensive Project Archive */
+.portfolio-primary-feature {
+  width: 100%;
+  background-color: #080808;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-l);
+  padding: clamp(16px, 2.5vw, 32px);
+  box-sizing: border-box;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6);
+  margin-bottom: clamp(28px, 3.5vw, 44px);
+}
+
+.portfolio-primary-figure {
+  width: 100%;
+  margin: 0 0 clamp(16px, 2vw, 24px) 0;
+  border-radius: var(--radius-m);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #000;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.7);
+}
+
+.portfolio-primary-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  user-select: none;
+}
+
+.portfolio-primary-caption {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 820px;
+}
+
+.portfolio-screen-pill {
+  display: inline-block;
+  align-self: flex-start;
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-medium);
+  font-style: italic;
+  font-size: 11px;
+  color: var(--color-primary);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.portfolio-primary-title {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-semibold);
+  font-size: clamp(18px, 1.8vw, 22px);
+  line-height: 1.3;
+  color: var(--color-on-secondary);
+  margin: 0;
+}
+
+.portfolio-primary-desc {
+  font-family: var(--font-tertiary);
+  font-weight: var(--font-weight-light);
+  font-size: clamp(14px, 1.25vw, 15px);
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.78);
+  margin: 0;
+}
+
+/* ==========================================================================
+   6. Design-Engineering Reflection Banner
+   Full-width balanced card replacing the redundant live button
+   ========================================================================== */
+.portfolio-reflection-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 3px solid var(--color-primary);
+  border-radius: var(--radius-l);
+  padding: clamp(24px, 3vw, 36px);
+  box-sizing: border-box;
+}
+
+.portfolio-reflection-badge {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.portfolio-reflection-title {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-semibold);
+  font-size: clamp(18px, 1.8vw, 22px);
+  line-height: 1.3;
+  color: var(--color-on-secondary);
+  margin: 0;
+}
+
+.portfolio-reflection-text {
+  font-family: var(--font-tertiary);
+  font-weight: var(--font-weight-light);
+  font-size: clamp(14px, 1.3vw, 16px);
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.82);
+  margin: 0;
+  max-width: 960px;
+}
+
+/* ==========================================================================
+   7. Rationale Grid Styling
+   ========================================================================== */
+.portfolio-rationale-section {
+  width: 100%;
+}
+
+/* ==========================================================================
+   8. Responsive Design & Viewport Adjustments
+   ========================================================================== */
+@media (max-width: 860px) {
+  .portfolio-hero-figure {
+    width: 90%;
+  }
+
+  .portfolio-responsive-duo {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .portfolio-phone-mockup {
+    max-width: 240px;
+    height: 380px;
+  }
+}
+
+@media (max-width: 640px) {
+  .portfolio-hero-figure {
+    width: 100%;
+    border-radius: var(--radius-m);
+  }
+}

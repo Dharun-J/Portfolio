@@ -1,0 +1,180 @@
+/* AllProjectsPage.css - "Things I’ve Made" View More / All Projects Showcase */
+
+.all-projects-page {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - var(--header-height));
+  background-color: var(--color-surface);
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.all-projects-container {
+  width: 100%;
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 0 32px clamp(48px, 6vw, 96px);
+  box-sizing: border-box;
+}
+
+/* Back Button (Button Medium variant from design system) */
+.all-projects-back-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding-top: clamp(24px, 3.2vw, 48px);
+}
+
+.all-projects-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(8px, 0.4vw + 6.2px, 12px);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  color: var(--color-secondary);
+  font-family: var(--font-tertiary);
+  font-weight: var(--font-weight-regular);
+  font-size: clamp(16px, 1.2vw + 10.7px, 28px);
+  line-height: 1;
+  letter-spacing: var(--letter-spacing-xs);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.2s ease;
+  user-select: none;
+}
+
+.all-projects-back-btn:hover {
+  transform: translateX(-4px);
+  opacity: 0.82;
+}
+
+.all-projects-back-btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.all-projects-back-icon {
+  width: clamp(20px, 1.2vw + 14.7px, 32px);
+  height: clamp(20px, 1.2vw + 14.7px, 32px);
+  display: block;
+  flex-shrink: 0;
+}
+
+.all-projects-back-label {
+  display: inline-block;
+}
+
+/* Page Heading: "Things I’ve Made" (H1 style, Tertiary color) */
+.all-projects-header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: clamp(16px, 2.2vw, 36px);
+  margin-bottom: clamp(32px, 4.5vw, 68px);
+}
+
+.all-projects-heading {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-semibold);
+  font-size: clamp(32px, 4.2vw, 56px);
+  line-height: 1.15;
+  letter-spacing: var(--letter-spacing-xs);
+  color: var(--color-tertiary);
+  margin: 0;
+  text-align: center;
+  user-select: none;
+}
+
+/* Responsive Reusable Projects Grid (Accommodates 9, 10, 11+ projects automatically) */
+.all-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 1.8vw, 24px);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.all-projects-card-item {
+  width: 100%;
+  aspect-ratio: 418 / 386;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+/* Tablet Layout (2 columns) */
+@media (max-width: 960px) {
+  .all-projects-container {
+    padding: 0 24px 64px;
+  }
+
+  .all-projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+}
+
+/* Mobile Layout (1 column, centered vertical list matching reference) */
+@media (max-width: 640px) {
+  .all-projects-container {
+    padding: 0 20px 48px;
+  }
+
+  .all-projects-header {
+    margin-top: 18px;
+    margin-bottom: 28px;
+  }
+
+  .all-projects-heading {
+    font-size: clamp(28px, 7.8vw, 38px);
+  }
+
+  .all-projects-grid {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+    margin: 0 auto;
+    gap: 20px;
+  }
+
+  .all-projects-card-item {
+    aspect-ratio: 379 / 350;
+  }
+}
+
+.page-all-projects {
+  background-color: var(--color-surface);
+}
+
+/* Mobile/Tablet header responsive rules when viewing All Projects page */
+@media (max-width: 768px) {
+  .page-all-projects .site-header,
+  .portfolio-app:has(.all-projects-page) .site-header {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    height: auto;
+    background-color: var(--color-surface);
+    padding: 28px 0 0 0;
+  }
+
+  .page-all-projects .site-logo,
+  .portfolio-app:has(.all-projects-page) .site-logo {
+    color: var(--color-secondary);
+  }
+
+  .page-all-projects .header-logo,
+  .portfolio-app:has(.all-projects-page) .header-logo {
+    filter: invert(1);
+  }
+
+  .page-all-projects .hamburger-bar,
+  .portfolio-app:has(.all-projects-page) .hamburger-bar {
+    background-color: var(--color-secondary);
+  }
+}

@@ -1,0 +1,237 @@
+/* ProjectCard.css - Premium interactive project card */
+
+.project-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background-color: #0c0f1d;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.project-card:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 4px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .project-card:hover {
+    box-shadow: 0 16px 36px rgba(0, 10, 56, 0.22);
+  }
+}
+
+/* Layer 1: Underlying Project Image */
+.project-card-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+  transform: scale(1);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .project-card:hover .project-card-image {
+    transform: scale(1.04);
+  }
+}
+
+.project-card.is-active .project-card-image {
+  transform: scale(1.04);
+}
+
+/* Layer 2: Base 20% Black Overlay (Visible in normal card state) */
+.project-card-base-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.20);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Layer 3: Top-Right Project Type SVG Icon (Layered strictly above 20% overlay) */
+.project-card-type-icon-wrapper {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  width: 28px;
+  height: 28px;
+  z-index: 5;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-card-type-icon {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  /* Transform SVG into crisp pure white with subtle drop-shadow */
+  filter: brightness(0) invert(1) drop-shadow(0 2px 6px rgba(0, 0, 0, 0.8));
+}
+
+@media (max-width: 600px) {
+  .project-card-type-icon-wrapper {
+    top: 16px;
+    right: 18px;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* Layer 4: Translucent Dark Gradient Overlay for Interactive Reveal */
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 30%,
+    rgba(0, 10, 45, 0.58) 68%,
+    rgba(0, 10, 45, 0.88) 100%
+  );
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .project-card:hover .project-overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.project-card:focus-visible .project-overlay,
+.project-card.is-active .project-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Bottom Content Container inside Reveal Overlay */
+.project-overlay-content {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 24px 24px;
+  box-sizing: border-box;
+  transform: translateY(8px);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .project-card:hover .project-overlay-content {
+    transform: translateY(0);
+  }
+}
+
+.project-card:focus-visible .project-overlay-content,
+.project-card.is-active .project-overlay-content {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  .project-overlay-content {
+    padding: 18px 20px;
+  }
+}
+
+/* Text Container */
+.project-overlay-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.project-card-title {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-semibold);
+  font-size: clamp(18px, 1.8vw, 22px);
+  line-height: 1.25;
+  color: var(--color-on-primary);
+  margin: 0 0 4px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.project-card-category {
+  font-family: var(--font-tertiary);
+  font-weight: var(--font-weight-regular);
+  font-size: 13.5px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Circular Action Button with Arrow */
+.project-action-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000a38;
+  cursor: pointer;
+  flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  transition: transform 0.25s ease,
+              background-color 0.25s ease,
+              color 0.25s ease;
+}
+
+.project-action-arrow {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.25s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .project-action-btn:hover {
+    transform: scale(1.1);
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+  }
+
+  .project-action-btn:hover .project-action-arrow {
+    transform: translate(1px, -1px);
+  }
+}
+
+@media (max-width: 600px) {
+  .project-action-btn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .project-action-arrow {
+    width: 18px;
+    height: 18px;
+  }
+}

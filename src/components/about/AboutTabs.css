@@ -1,0 +1,165 @@
+.about-tabs-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.about-tabs-nav {
+  display: flex;
+  align-items: baseline;
+  gap: clamp(32px, 4.5vw, 64px);
+  margin-bottom: clamp(18px, 2vw, 24px);
+  border-bottom: none;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.about-tab-btn {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-semibold);
+  font-size: 24px;
+  line-height: var(--line-height-md);
+  letter-spacing: var(--letter-spacing-xs);
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  white-space: nowrap;
+  outline: none;
+  user-select: none;
+  box-sizing: border-box;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.about-tab-btn-active {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
+}
+
+.about-tab-btn-inactive {
+  color: var(--color-on-surface);
+  text-decoration: none;
+}
+
+.about-tab-btn-inactive:hover {
+  color: var(--color-primary);
+}
+
+.about-tab-panel {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.about-tab-items {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(14px, 1.5vw, 18px);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.about-tab-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.about-item-heading {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-bold);
+  font-size: clamp(17px, 1.4vw, 20px);
+  line-height: 1.25;
+  color: var(--color-on-surface);
+  letter-spacing: var(--letter-spacing-xs);
+}
+
+.about-item-detail {
+  font-family: var(--font-tertiary);
+  font-weight: var(--font-weight-regular);
+  font-size: clamp(15px, 1.3vw, 18px);
+  line-height: 1.35;
+  color: var(--color-on-surface-variant);
+  letter-spacing: var(--letter-spacing-xs);
+}
+
+/* Tablet Layout (769px to 1023px) */
+@media (min-width: 769px) and (max-width: 1023px) {
+  .about-tabs-nav {
+    gap: clamp(20px, 2.5vw, 36px);
+    margin-bottom: 20px;
+  }
+
+  .about-tab-btn {
+    font-size: clamp(17px, 1.8vw, 20px);
+  }
+
+  .about-item-heading {
+    font-size: 18px;
+  }
+
+  .about-item-detail {
+    font-size: 16px;
+  }
+}
+
+/* Mobile responsive tab layout (<= 768px) */
+@media (max-width: 768px) {
+  .about-tabs-nav {
+    justify-content: space-between;
+    gap: clamp(6px, 2vw, 16px);
+    margin-bottom: 18px;
+  }
+
+  .about-tab-btn {
+    font-size: clamp(14px, 3.6vw, 16.5px);
+  }
+
+  .about-item-heading {
+    font-size: clamp(15px, 3.8vw, 17px);
+  }
+
+  .about-item-detail {
+    font-size: clamp(14px, 3.4vw, 16px);
+  }
+}
+
+/* Smaller mobile phones (<= 380px) */
+@media (max-width: 380px) {
+  .about-tabs-nav {
+    justify-content: space-between;
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+
+  .about-tab-btn {
+    font-size: clamp(13px, 3.5vw, 14px);
+    text-underline-offset: 4px;
+  }
+
+  .about-item-heading {
+    font-size: 15px;
+  }
+
+  .about-item-detail {
+    font-size: 14px;
+  }
+}
+
+/* Very narrow phones (<= 340px) */
+@media (max-width: 340px) {
+  .about-tab-btn {
+    font-size: 12.5px;
+  }
+}

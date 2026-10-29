@@ -1,0 +1,484 @@
+Build the next section of the portfolio: the WORK / PROJECTS section.
+
+IMPORTANT:
+The existing sections are already completed in this order:
+
+Hero
+→ About Me
+→ What I Work With
+→ Work / Projects
+
+DO NOT modify, redesign, refactor, resize, reposition, or otherwise alter:
+- Hero
+- About Me
+- What I Work With
+
+Only add and implement the new Work / Projects section.
+
+The supplied desktop and mobile screenshots are the visual source of truth.
+
+WORK SECTION OVERVIEW
+This is the most important visual section of the portfolio.
+
+The section title is:
+
+"Things I’ve Made"
+
+The desktop design uses a BENTO GRID composition.
+
+Reproduce the desktop bento composition as closely as possible to the supplied desktop reference.
+
+Do not replace the bento layout with a generic grid.
+
+The mobile design intentionally changes the composition into a vertical project list.
+
+Use the supplied mobile screenshot as the mobile source of truth.
+
+SECTION TITLE
+"Things I’ve Made"
+
+Use:
+- Subtitle typography style
+- On Primary color
+
+The title should visually match the placement and scale shown in the references.
+
+On desktop, the title is contained inside its own blue gradient tile in the center of the bento grid.
+
+On mobile, the title appears as a normal section heading above the project cards, matching the supplied mobile reference.
+
+DESKTOP BENTO GRID
+Reproduce the supplied desktop bento arrangement.
+
+The desktop composition consists of:
+
+TOP ROW:
+- Ecommerce project → wide horizontal card
+- Home Manager project → vertical card
+
+MIDDLE ROW:
+- SoundZone project → wide horizontal card
+- "Things I’ve Made" → central square/featured title card
+- Mathmos project → vertical card
+
+BOTTOM ROW:
+- Medical project → smaller horizontal card
+- Chat project → wide horizontal card
+
+The proportions, relative sizes, spacing, and placement should closely follow the supplied desktop screenshot.
+
+Do not randomly redistribute the cards.
+
+The "Things I’ve Made" tile is part of the bento composition and must remain in the center.
+
+DESKTOP THINGS I'VE MADE TILE
+The central "Things I’ve Made" tile uses this exact gradient:
+
+Top:
+#2A4FF1 at 100%
+
+Bottom:
+#000A38 at 100%
+
+Use a vertical linear gradient from top to bottom.
+
+The text:
+
+"Things
+I’ve
+Made"
+
+uses:
+- Subtitle style
+- On Primary color
+
+The title tile is NOT interactive.
+
+IMPORTANT:
+Do not add:
+- hover animation
+- click interaction
+- overlay
+- arrow
+- cursor interaction
+
+It is simply the visual center/anchor of the bento grid.
+
+PROJECT IMAGES
+Use the supplied project image files directly.
+
+Do NOT recreate, regenerate, crop into a different composition unnecessarily, or substitute these images.
+
+Use the following exact mapping:
+
+1. Ecommerce
+File:
+`ecommerce.png`
+
+2. Home Manager
+File:
+`home manager.png`
+
+3. SoundZone
+File:
+`soundzone.png`
+
+4. Mathmos
+File:
+`mathmos.png`
+
+5. Medical / Hospital Management
+File:
+`medical.png`
+
+6. Chat Application
+File:
+`chat.png`
+
+These six images correspond to the six project cards.
+
+Preserve the intended visual crop/orientation shown in the desktop and mobile references.
+
+Do not use one image for another project.
+
+PROJECT TYPE ICONS
+Each project card has a small project-type logo in the top corner.
+
+Use the SVG assets already provided for the previous "What I Work With" section.
+
+Use:
+
+- `figma.svg` for Figma/UI/UX projects
+- `code.svg` for development projects
+
+Project classification:
+
+Ecommerce → Figma
+SoundZone → Figma
+Mathmos → Figma
+
+Home Manager → code
+Medical → code
+Chat → code
+
+Use the SVG files directly.
+
+Do NOT recreate these icons with an icon library.
+
+Do NOT use text such as "Figma" or "</>" instead of the SVG.
+
+The icon should remain clearly visible over the project image.
+
+PROJECT CARD INTERACTION
+I want a modern, premium interaction for the project cards.
+When the user hovers over a project card:
+1. The project image should subtly scale/zoom.
+2. A dark translucent gradient/overlay should appear smoothly.
+3. Project information should reveal itself cleanly.
+4. Show:
+   - Project name
+   - Short project description/type
+   - A clear circular or compact arrow/action button
+5. The interaction should feel smooth and premium.
+
+The information should not immediately cover the entire image with an opaque block.
+
+The underlying project image should remain visible.
+
+Use subtle transitions such as:
+- opacity
+- transform
+- image scale
+- overlay gradient
+
+Avoid excessive:
+- bouncing
+- large rotations
+- flashy animations
+- glowing neon effects
+- unnecessary parallax
+- excessive blur
+
+The interaction should feel like a professional design portfolio, not a template animation.
+
+CARD CLICK BEHAVIOR
+The project card should be clickable.
+
+The arrow/action control should clearly communicate that the project can be opened.
+
+The interaction should work with keyboard focus as well as mouse interaction where appropriate.
+
+The entire project card can act as the clickable area, while the arrow remains the visual action indicator.
+
+Do NOT make the central "Things I’ve Made" tile clickable.
+
+PROJECT CARD INTERACTION — ALL DEVICES
+Every project card must have an interactive experience.
+
+This interaction is required on:
+- Desktop
+- Laptop
+- Tablet
+- Mobile
+Do NOT remove the interaction on mobile simply because mobile devices do not have hover.
+
+The interaction should adapt to the device/input method while preserving the same visual concept.
+
+DESKTOP / POINTER DEVICES:
+
+When the user hovers over a project card:
+
+- subtly scale/zoom the project image
+- reveal a refined dark translucent gradient/overlay
+- reveal the project information
+- show the project name
+- show a short project description/type
+- reveal a clear circular/compact arrow action
+- use smooth transitions
+
+The underlying project image must remain visible.
+
+MOBILE / TOUCH DEVICES:
+
+The same project-card interaction must be available through touch.
+
+When the user taps a project card:
+
+- activate the same or equivalent visual information reveal
+- show the project information
+- show the project action/arrow
+- maintain the image visibility
+- provide a clear way to open the project
+
+A second tap or the action control can navigate to the project.
+
+Do NOT simply remove the overlay/information interaction on mobile.
+
+Do NOT require hover for mobile.
+
+The interaction should feel intentional for touch input rather than being a desktop hover state awkwardly forced onto a phone.
+
+TABLET:
+
+Support the interaction appropriately based on the available input method.
+
+If the device supports touch, tapping should activate the interaction.
+
+If it supports a pointer/hover, hovering may activate the interaction.
+
+INTERACTION VISUAL STYLE
+Create a more modern, premium version.
+
+The interaction should feel like:
+
+PROJECT IMAGE
+→ subtle image movement/zoom
+→ translucent/dark overlay
+→ project information appears
+→ action arrow becomes available
+
+Keep the transition smooth and restrained.
+
+Use subtle:
+- opacity transitions
+- transform
+- image scale
+- gradient overlay
+- content reveal
+
+Avoid:
+- excessive animation
+- bouncing
+- large rotations
+- flashy effects
+- excessive glow
+- unnecessary parallax
+
+The project image should remain the dominant visual element.
+
+The interaction should work consistently across desktop, tablet, and mobile, while adapting the trigger to the device.
+
+PROJECT NAVIGATION
+When the user activates the project action:
+
+- navigate to that project's project-detail page.
+
+The entire card may also be clickable if appropriate.
+
+The action arrow should remain a clear visual indication that the project can be opened.
+
+The central "Things I’ve Made" tile is the ONLY tile that must NOT have this project interaction.
+
+It must remain completely non-interactive.
+
+TABLET / INTERMEDIATE WIDTHS
+Do not assume that a desktop bento grid must remain unchanged at every width.
+
+For tablet and intermediate widths, intelligently adapt the composition.
+
+Possible behavior:
+- preserve a reduced bento composition where there is sufficient space
+- transition to a simpler grid when the desktop composition becomes too constrained
+- eventually transition to the mobile vertical layout
+
+The important requirement is preserving the visual hierarchy and project relationships.
+
+Do NOT allow:
+- extremely narrow project cards
+- distorted images
+- awkward empty spaces
+- horizontal overflow
+- overlapping cards
+- unreadable project information
+
+The layout should feel intentionally designed at every viewport size.
+
+VIEW MORE BUTTON
+At the bottom of the Work section, add:
+
+"View More"
+
+Use:
+- Button Large variant typography/style
+- Primary color for the button background
+- On Primary color for the button text
+
+The button should match the supplied reference.
+
+Keep it centered.
+
+It should have an appropriate hover/focus state, but keep the interaction subtle and consistent with the portfolio.
+
+PROJECT DATA
+Structure the project cards using reusable project data rather than hardcoding six completely separate card components.
+
+Each project should be easy to update later.
+
+For now, use temporary project names/descriptions where the exact final copy has not yet been provided.
+
+Suggested names:
+
+- Ecommerce
+- Home Manager
+- SoundZone
+- Mathmos
+- Medical
+- Chat Application
+
+Do not invent long case-study descriptions.
+
+Keep the visible project information concise.
+
+The important priority is the visual presentation.
+
+IMAGE BEHAVIOR
+The project images are already prepared specifically for this portfolio.
+
+Do not aggressively crop them.
+
+Use appropriate image rendering such as cover/contain depending on the individual image and the reference composition.
+
+The final result should preserve the important subject of each image.
+
+Especially preserve:
+- phone positioning
+- laptop positioning
+- UI visibility
+- important project content
+
+Do not allow responsive resizing to crop away the primary subject unnecessarily.
+
+RESPONSIVE SCALING
+The desktop screenshot represents the intended desktop composition.
+
+The mobile screenshot represents the intended mobile composition.
+
+Do not treat the desktop pixel dimensions as fixed CSS dimensions.
+
+Scale the section naturally according to the viewport.
+
+Test at:
+
+- 1440px
+- 1280px
+- 1024px
+- 900px
+- 768px
+- 600px
+- 480px
+- 390px
+- 375px
+
+Typography, card dimensions, gaps, image crops, and section spacing should adapt appropriately.
+
+Do not make text unexpectedly larger when the viewport becomes smaller.
+
+Do not use a fixed section height that causes content to overflow.
+
+DESIGN SYSTEM
+Use `tokens.json` as the design-system foundation.
+
+Maintain the existing semantic relationships.
+
+Use the appropriate existing:
+- Subtitle style
+- Button Large style
+- Primary
+- On Primary
+- Secondary
+- typography tokens
+- radius tokens
+- spacing tokens
+
+For the central gradient tile, use the explicitly specified:
+
+#2A4FF1 → #000A38
+
+Do not replace this gradient with another blue.
+
+Do not introduce unnecessary colors.
+
+VISUAL FIDELITY
+The supplied desktop and mobile screenshots are the visual source of truth.
+
+Reproduce:
+- bento composition
+- card proportions
+- spacing
+- rounded corners
+- image placement
+- project-type icons
+- central gradient tile
+- title placement
+- View More button
+- mobile project ordering
+
+Do not redesign the section into a generic portfolio gallery.
+
+Do not add:
+- extra decorative elements
+- random gradients
+- random icons
+- unnecessary badges
+- excessive animations
+- unnecessary shadows
+- floating UI elements
+
+The visual design should remain clean, modern, premium, and image-led.
+
+MOST IMPORTANT CONSTRAINT
+DO NOT TOUCH ANY PREVIOUS SECTION.
+
+The final page order must remain:
+
+HERO
+↓
+ABOUT ME
+↓
+WHAT I WORK WITH
+↓
+THINGS I’VE MADE / WORK
+
+Only implement the Work section below the existing "What I Work With" section.
+
+After implementation, verify that all previous sections remain visually and functionally unchanged.

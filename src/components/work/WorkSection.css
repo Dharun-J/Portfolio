@@ -1,0 +1,277 @@
+/* WorkSection.css - "Things I’ve Made" Work / Projects Section */
+
+.work-section {
+  width: 100%;
+  background-color: var(--color-surface);
+  padding: 48px 0 80px 0;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.work-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   Desktop Bento Grid Composition
+   Relative column proportions: 940px (Cols 1 & 2) : 428px (Col 3)
+   Gaps: 24px
+   ========================================================================== */
+
+.work-bento-grid {
+  --bento-gap: 24px;
+  container-type: inline-size;
+  container-name: bento;
+  --row-height: min(309px, calc((100cqw - var(--bento-gap)) * (309 / 1368)));
+
+  display: grid;
+  grid-template-columns: minmax(0, 940fr) minmax(0, 428fr);
+  gap: var(--bento-gap);
+  width: 100%;
+  max-width: 1392px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Left Main Block (Cols 1 & 2) */
+.work-bento-main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--bento-gap);
+  width: 100%;
+}
+
+/* Row 1: Ecommerce wide horizontal card */
+.work-slot-ecommerce {
+  width: 100%;
+  height: var(--row-height);
+  flex-shrink: 0;
+}
+
+/* Row 2: SoundZone (558fr) + Central Title Tile (358fr) */
+.work-bento-row-middle {
+  display: grid;
+  grid-template-columns: minmax(0, 558fr) minmax(0, 358fr);
+  gap: var(--bento-gap);
+  width: 100%;
+  height: var(--row-height);
+  flex-shrink: 0;
+}
+
+.work-slot-soundzone {
+  width: 100%;
+  height: 100%;
+}
+
+.work-slot-center-title {
+  width: 100%;
+  height: 100%;
+}
+
+/* Central "Things I’ve Made" Gradient Tile */
+.bento-title-tile {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(180deg, #2A4FF1 0%, #000A38 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: clamp(16px, 2vw, 28px);
+  box-sizing: border-box;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+  box-shadow: 0 4px 20px rgba(0, 10, 56, 0.15);
+}
+
+/* Sub Heading typography style from tokens.json */
+.bento-title-text {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-medium);
+  font-size: clamp(30px, 3.45cqw, 48px);
+  line-height: 1.35;
+  color: var(--color-on-primary);
+  margin: 0;
+  letter-spacing: var(--letter-spacing-xs);
+  text-align: center;
+}
+
+/* Row 3: Medical smaller horizontal (334fr) + Chat wide horizontal (582fr) */
+.work-bento-row-bottom {
+  display: grid;
+  grid-template-columns: minmax(0, 334fr) minmax(0, 582fr);
+  gap: var(--bento-gap);
+  width: 100%;
+  height: var(--row-height);
+  flex-shrink: 0;
+}
+
+.work-slot-medical {
+  width: 100%;
+  height: 100%;
+}
+
+.work-slot-chat {
+  width: 100%;
+  height: 100%;
+}
+
+/* Right Side Block (Col 3) */
+.work-bento-side {
+  display: flex;
+  flex-direction: column;
+  gap: var(--bento-gap);
+  width: 100%;
+}
+
+/* Row 1: Home Manager vertical card */
+.work-slot-home-manager {
+  width: 100%;
+  height: var(--row-height);
+  flex-shrink: 0;
+}
+
+/* Row 2 & 3: Mathmos tall vertical card spanning both rows strictly */
+.work-slot-mathmos {
+  width: 100%;
+  height: calc(var(--row-height) * 2 + var(--bento-gap));
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Mobile / Small Screens Vertical Layout
+   ========================================================================== */
+
+.work-mobile-header {
+  display: none;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.work-mobile-heading {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-medium);
+  font-size: clamp(28px, 6.8vw, 40px);
+  line-height: 1.2;
+  color: var(--color-tertiary);
+  margin: 0;
+  letter-spacing: var(--letter-spacing-xs);
+  text-align: center;
+}
+
+.work-mobile-list {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.work-mobile-card-item {
+  width: 100%;
+  aspect-ratio: 379 / 350;
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   View More Action Button
+   Button Large Variant: MADE Okine Sans, Regular 400, 25px
+   ========================================================================== */
+
+.work-action-wrapper {
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.work-view-more-btn {
+  font-family: var(--font-tertiary);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-7);
+  line-height: 1.2;
+  color: var(--color-on-primary);
+  background-color: var(--color-primary);
+  border: none;
+  outline: none;
+  border-radius: 9999px;
+  padding: 14px 44px;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(42, 79, 241, 0.3);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.25s ease,
+              box-shadow 0.25s ease;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.work-view-more-btn:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 4px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .work-view-more-btn:hover {
+    transform: translateY(-2px);
+    background-color: #2444d3;
+    box-shadow: 0 8px 26px rgba(42, 79, 241, 0.45);
+  }
+}
+
+.work-view-more-btn:active {
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+
+/* Tablet & Mobile Breakpoint (<= 880px) */
+@media (max-width: 880px) {
+  .work-section {
+    padding: 36px 0 60px 0;
+  }
+
+  .work-container {
+    padding: 0 20px;
+  }
+
+  .work-bento-grid {
+    display: none;
+  }
+
+  .work-mobile-header {
+    display: block;
+    margin-bottom: 24px;
+  }
+
+  .work-mobile-list {
+    display: flex;
+  }
+
+  .work-action-wrapper {
+    margin-top: 36px;
+  }
+
+  .work-view-more-btn {
+    font-size: 20px;
+    padding: 12px 38px;
+  }
+}

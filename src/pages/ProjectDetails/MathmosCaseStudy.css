@@ -1,0 +1,955 @@
+/* MathmosCaseStudy.css - Premium Art-Directed Case Study for Mathmos Mobile App */
+
+.mathmos-editorial-case-study {
+  width: 100%;
+  margin-top: clamp(32px, 4vw, 56px);
+  margin-bottom: clamp(48px, 6vw, 84px);
+}
+
+/* ==========================================================================
+   1. Hero Showcase Section (Handheld Mobile Experience Mockup)
+   ========================================================================== */
+.mathmos-hero-showcase {
+  width: 100%;
+  margin-top: clamp(24px, 3.2vw, 44px);
+  margin-bottom: clamp(64px, 8vw, 112px);
+}
+
+.mathmos-hero-figure {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  border-radius: var(--radius-l);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.75),
+              0 0 40px rgba(42, 79, 241, 0.1);
+  background-color: #060606;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .mathmos-hero-figure:hover {
+    transform: translateY(-3px);
+    border-color: rgba(42, 79, 241, 0.35);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.85),
+                0 0 50px rgba(42, 79, 241, 0.18);
+  }
+}
+
+.mathmos-hero-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1672 / 941;
+  object-fit: contain;
+  user-select: none;
+}
+
+/* ==========================================================================
+   2. Alternating Two-Column Sections Media Variations
+   ========================================================================== */
+.mathmos-media-frame {
+  margin: 0;
+  width: 100%;
+  border-radius: var(--radius-l);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.5);
+  background-color: #080808;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .mathmos-media-frame:hover {
+    transform: translateY(-2px);
+    border-color: rgba(42, 79, 241, 0.35);
+    box-shadow: 0 20px 52px rgba(0, 0, 0, 0.6);
+  }
+}
+
+/* Dual Phone Screen Layout */
+.mathmos-dual-screen {
+  padding: clamp(16px, 2.5vw, 28px);
+  display: flex;
+  gap: clamp(12px, 1.8vw, 24px);
+  justify-content: center;
+  align-items: center;
+}
+
+.mathmos-phone-device {
+  flex: 1;
+  max-width: 250px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background-color: #030303;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+}
+
+.mathmos-phone-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  user-select: none;
+}
+
+.mathmos-phone-caption {
+  font-family: var(--font-secondary);
+  font-size: clamp(11px, 1vw, 12px);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  padding: 8px 10px;
+  background-color: rgba(255, 255, 255, 0.03);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* Triple Flow Screens Layout (Checkout progression) */
+.mathmos-triple-screen {
+  padding: clamp(14px, 2vw, 24px);
+  display: flex;
+  gap: clamp(10px, 1.4vw, 18px);
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.mathmos-triple-phone {
+  flex: 1;
+  max-width: 190px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background-color: #030303;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.55);
+  display: flex;
+  flex-direction: column;
+}
+
+.mathmos-triple-phone.is-offset {
+  transform: translateY(-8px);
+  border-color: rgba(42, 79, 241, 0.3);
+}
+
+/* Single Heroic Focus Phone with Detail Tray */
+.mathmos-focus-screen {
+  padding: clamp(16px, 2.5vw, 28px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.mathmos-focus-pair {
+  display: flex;
+  gap: clamp(14px, 2vw, 24px);
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.mathmos-focus-phone {
+  flex: 1;
+  max-width: 250px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background-color: #030303;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.mathmos-spec-card {
+  flex: 1.1;
+  max-width: 280px;
+  border-radius: var(--radius-m);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background-color: #0e0e0e;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+
+.mathmos-spec-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.mathmos-spec-caption {
+  font-family: var(--font-secondary);
+  font-size: 11px;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.04em;
+  color: var(--color-primary);
+  text-align: center;
+  padding: 6px 10px;
+  background-color: rgba(42, 79, 241, 0.08);
+  border-top: 1px solid rgba(42, 79, 241, 0.15);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   3. Dedicated Section: Interactions in Motion (Native Video Player)
+   ========================================================================== */
+.mathmos-video-section {
+  width: 100%;
+  padding-top: clamp(36px, 4.5vw, 56px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: clamp(64px, 8vw, 112px);
+}
+
+.mathmos-video-header {
+  width: 100%;
+  margin-bottom: clamp(28px, 3.5vw, 44px);
+}
+
+.mathmos-video-lead {
+  font-family: var(--font-tertiary);
+  font-weight: var(--font-weight-light);
+  font-size: clamp(15px, 1.35vw, 18px);
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.78);
+  margin: 10px 0 0 0;
+  width: 100%;
+}
+
+.mathmos-video-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  aspect-ratio: 1000 / 720;
+  background-color: #060606;
+  border-radius: var(--radius-l);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 52px rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .mathmos-video-wrapper:hover {
+    border-color: rgba(42, 79, 241, 0.35);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.75),
+                0 0 35px rgba(42, 79, 241, 0.12);
+  }
+}
+
+.mathmos-video-player {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: #000;
+  outline: none;
+}
+
+/* ==========================================================================
+   4. The Reusable Figma Component System
+   ========================================================================== */
+.mathmos-system-section {
+  width: 100%;
+  padding-top: clamp(36px, 4.5vw, 56px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: clamp(64px, 8vw, 112px);
+}
+
+.mathmos-system-header {
+  width: 100%;
+  margin-bottom: clamp(32px, 4vw, 48px);
+}
+
+.mathmos-system-lead {
+  font-family: var(--font-tertiary);
+  font-weight: var(--font-weight-light);
+  font-size: clamp(15px, 1.35vw, 18px);
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.78);
+  margin: 10px 0 0 0;
+  width: 100%;
+}
+
+/* Product-Card Deep Dive Container */
+.mathmos-deepdive-container {
+  background-color: #080808;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-l);
+  padding: clamp(24px, 3.5vw, 44px);
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.5);
+  margin-bottom: clamp(48px, 6vw, 84px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(28px, 3.5vw, 40px);
+}
+
+.mathmos-deepdive-meta {
+  width: 100%;
+}
+
+.mathmos-deepdive-title {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-semibold);
+  font-size: clamp(20px, 2.1vw, 26px);
+  line-height: 1.25;
+  color: var(--color-on-secondary);
+  margin: 0 0 8px 0;
+  letter-spacing: var(--letter-spacing-xs);
+}
+
+.mathmos-deepdive-lead {
+  font-family: var(--font-tertiary);
+  font-weight: var(--font-weight-light);
+  font-size: clamp(14px, 1.25vw, 16px);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.84);
+  margin: 0;
+  width: 100%;
+}
+
+/* Focused Astro Product Card Presentation */
+.mathmos-deepdive-focus {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.mathmos-deepdive-focus .mathmos-astro-card-item {
+  max-width: 440px;
+  width: 100%;
+}
+
+.mathmos-astro-card-item {
+  display: flex;
+  flex-direction: column;
+  background-color: #0c0c0c;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-m);
+  padding: clamp(16px, 2vw, 24px);
+  box-sizing: border-box;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .mathmos-astro-card-item:hover {
+    transform: translateY(-2px);
+    border-color: rgba(42, 79, 241, 0.3);
+  }
+}
+
+.mathmos-astro-card-frame {
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto 16px auto;
+  border-radius: var(--radius-m);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #040404;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.55);
+}
+
+.mathmos-astro-card-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.mathmos-astro-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 14px;
+}
+
+.mathmos-astro-card-pill {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-medium);
+  font-style: italic;
+  font-size: clamp(12px, 1.1vw, 13px);
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.mathmos-astro-card-name {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-semibold);
+  font-size: clamp(16px, 1.5vw, 18px);
+  color: var(--color-on-secondary);
+  margin: 0;
+}
+
+.mathmos-astro-card-desc {
+  font-family: var(--font-tertiary);
+  font-weight: var(--font-weight-light);
+  font-size: clamp(13px, 1.15vw, 14px);
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+}
+
+/* Compact Variant Scale Overview */
+.mathmos-scale-overview {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: clamp(20px, 2.8vw, 32px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mathmos-scale-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.mathmos-scale-title {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-semibold);
+  font-size: clamp(16px, 1.5vw, 18px);
+  color: var(--color-on-secondary);
+  margin: 0;
+}
+
+.mathmos-scale-badge {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-medium);
+  font-size: clamp(12px, 1.1vw, 13px);
+  color: var(--color-primary);
+  background: rgba(42, 79, 241, 0.12);
+  border: 1px solid rgba(42, 79, 241, 0.25);
+  padding: 3px 10px;
+  border-radius: 9999px;
+  letter-spacing: 0.02em;
+}
+
+.mathmos-scale-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: clamp(10px, 1.4vw, 18px);
+  width: 100%;
+}
+
+.mathmos-mini-variant {
+  display: flex;
+  flex-direction: column;
+  background-color: #0c0c0c;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-s);
+  overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .mathmos-mini-variant:hover {
+    transform: translateY(-2px);
+    border-color: rgba(42, 79, 241, 0.4);
+  }
+}
+
+.mathmos-mini-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  background-color: #040404;
+}
+
+.mathmos-mini-label {
+  font-family: var(--font-secondary);
+  font-size: 11px;
+  font-weight: var(--font-weight-light);
+  line-height: 1.3;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 6px 8px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+
+/* ==========================================================================
+   5. Component Gallery (6 Logical Families Grid)
+   ========================================================================== */
+.mathmos-gallery-section {
+  width: 100%;
+  margin-top: clamp(20px, 3vw, 36px);
+}
+
+.mathmos-gallery-title {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-semibold);
+  font-size: clamp(22px, 2.3vw, 28px);
+  color: var(--color-on-secondary);
+  margin: 0 0 8px 0;
+  letter-spacing: var(--letter-spacing-xs);
+}
+
+.mathmos-gallery-lead {
+  font-family: var(--font-tertiary);
+  font-weight: var(--font-weight-light);
+  font-size: clamp(14px, 1.25vw, 16px);
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.78);
+  margin: 0 0 clamp(24px, 3.5vw, 40px) 0;
+  width: 100%;
+}
+
+.mathmos-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(20px, 2.5vw, 36px);
+  width: 100%;
+  align-items: stretch;
+}
+
+.mathmos-family-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #080808;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-l);
+  padding: clamp(20px, 2.5vw, 32px);
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.5);
+  gap: clamp(16px, 2vw, 24px);
+  box-sizing: border-box;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .mathmos-family-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(42, 79, 241, 0.35);
+    box-shadow: 0 20px 52px rgba(0, 0, 0, 0.6);
+  }
+}
+
+.mathmos-family-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 0;
+}
+
+@media (min-width: 961px) {
+  .mathmos-family-meta {
+    min-height: 122px;
+  }
+}
+
+.mathmos-family-num {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-medium);
+  font-style: italic;
+  font-size: clamp(12px, 1.1vw, 13px);
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.mathmos-family-name {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-semibold);
+  font-size: clamp(18px, 1.8vw, 22px);
+  color: var(--color-on-secondary);
+  margin: 0;
+}
+
+.mathmos-family-desc {
+  font-family: var(--font-tertiary);
+  font-weight: var(--font-weight-light);
+  font-size: clamp(13px, 1.15vw, 14px);
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+}
+
+/* Family Tray Previews */
+.mathmos-family-tray {
+  margin-top: 0;
+  flex: 1;
+  background-color: #040404;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-m);
+  padding: clamp(14px, 1.8vw, 22px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Family 1: Product & Model Cards Tray */
+.mathmos-tray-cards {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(10px, 1.4vw, 14px);
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.mathmos-tray-cards-row {
+  display: flex;
+  gap: clamp(10px, 1.4vw, 16px);
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.mathmos-tray-card-img {
+  max-height: 120px;
+  width: auto;
+  max-width: 48%;
+  object-fit: contain;
+  border-radius: var(--radius-s);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mathmos-tray-card-img.is-portrait {
+  max-height: 130px;
+}
+
+/* Family 2: Category Cards Tray */
+.mathmos-tray-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.mathmos-cate-row {
+  display: flex;
+  gap: clamp(10px, 1.4vw, 16px);
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.mathmos-tray-cate-img {
+  max-height: 100px;
+  width: auto;
+  max-width: 48%;
+  object-fit: contain;
+  border-radius: var(--radius-s);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mathmos-tray-cate-img.is-small {
+  max-height: 75px;
+  max-width: 70%;
+}
+
+/* Family 3: Buttons Tray */
+.mathmos-tray-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.mathmos-btn-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.mathmos-tray-btn-img {
+  height: 36px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.mathmos-tray-btn-img.is-large {
+  max-width: 260px;
+}
+
+/* Family 4: Search & Selection Controls Tray */
+.mathmos-tray-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.mathmos-tray-input-img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  object-fit: contain;
+}
+
+.mathmos-controls-row {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.mathmos-control-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-secondary);
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 6px 12px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mathmos-tray-icon-small {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* Family 5: Settings Cards & Specs Tray */
+.mathmos-tray-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.mathmos-tray-setting-img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  object-fit: contain;
+  border-radius: var(--radius-s);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Family 6: Bottom Nav Dock Tray */
+.mathmos-tray-dock {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.mathmos-dock-img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ==========================================================================
+   6. Responsive Adaptations for Mathmos Case Study
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .mathmos-scale-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 960px) {
+  .mathmos-gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    align-items: start;
+  }
+
+  .mathmos-family-card {
+    height: auto;
+  }
+
+  .mathmos-family-meta {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 860px) {
+  .mathmos-dual-screen {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .mathmos-phone-device {
+    max-width: 220px;
+  }
+
+  .mathmos-triple-screen {
+    padding: 14px;
+    gap: 8px;
+  }
+
+  .mathmos-triple-phone {
+    max-width: 150px;
+  }
+
+  .mathmos-focus-pair {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .mathmos-focus-phone,
+  .mathmos-spec-card {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 640px) {
+  .mathmos-hero-figure {
+    max-width: 100%;
+    border-radius: var(--radius-m);
+  }
+
+  .mathmos-deepdive-container {
+    padding: 20px;
+    border-radius: var(--radius-m);
+  }
+
+  .mathmos-scale-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .mathmos-dual-screen {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 12px;
+  }
+
+  .mathmos-phone-device {
+    max-width: 250px;
+    width: 100%;
+  }
+
+  .mathmos-triple-screen {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 12px;
+  }
+
+  .mathmos-triple-phone {
+    max-width: 250px;
+    width: 100%;
+  }
+
+  .mathmos-triple-phone.is-offset {
+    transform: none;
+  }
+
+  .mathmos-video-wrapper {
+    border-radius: var(--radius-m);
+  }
+
+  .mathmos-family-card {
+    padding: 18px;
+    border-radius: var(--radius-m);
+  }
+
+  .mathmos-family-tray {
+    padding: 16px 12px;
+    min-height: auto;
+  }
+
+  .mathmos-tray-cards {
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .mathmos-tray-cards-row {
+    gap: 8px;
+    justify-content: center;
+  }
+
+  .mathmos-tray-card-img {
+    max-height: 100px;
+    max-width: 46%;
+  }
+
+  .mathmos-tray-card-img.is-portrait {
+    max-height: 110px;
+  }
+
+  .mathmos-tray-categories {
+    gap: 10px;
+    align-items: center;
+  }
+
+  .mathmos-cate-row {
+    gap: 8px;
+    justify-content: center;
+  }
+
+  .mathmos-tray-cate-img {
+    max-width: 48%;
+    max-height: 80px;
+  }
+
+  .mathmos-tray-cate-img.is-small {
+    max-width: 80%;
+    max-height: 60px;
+  }
+
+  .mathmos-btn-row {
+    gap: 8px;
+    justify-content: center;
+  }
+
+  .mathmos-tray-btn-img {
+    height: 32px;
+  }
+
+  .mathmos-controls-row {
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
